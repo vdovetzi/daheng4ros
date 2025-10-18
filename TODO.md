@@ -10,7 +10,7 @@
 
 ## 🐳 Docker 
 
-- [ ] Create `Dockerfile` for building `daheng4ros` node
+- [x] Create `Dockerfile` for building `daheng4ros` node
 - [ ] Add README section for Docker usage instructions
 
 ## 🧩 Misc
