@@ -1,0 +1,17 @@
+services:
+  daheng-camera:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    container_name: daheng4ros
+    privileged: true
+    network_mode: host
+    devices:
+      - "/dev:/dev"
+    volumes:
+      - /dev:/dev
+    environment:
+      - DISPLAY=${DISPLAY}
+      - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
+      - LD_LIBRARY_PATH=/daheng_ws/build/daheng4ros/:${LD_LIBRARY_PATH}
+    tty: true
