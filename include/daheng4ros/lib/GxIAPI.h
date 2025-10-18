@@ -15,7 +15,7 @@
 #include "GxPixelFormat.h"
 
 //------------------------------------------------------------------------------
-//Chinese	±ê×¼C API¹¦ÄÜº¯Êý¶¨Òå
+//Chinese	ï¿½ï¿½×¼C APIï¿½ï¿½ï¿½Üºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //English	Standard C API function definition
 //------------------------------------------------------------------------------
 
@@ -23,26 +23,26 @@
 //----------------------------------------------------------------------------------
 /**
 \Chinese:
-\brief		»ñÈ¡¶¯Ì¬¿â°æ±¾ºÅ.
-\return 	¶¯Ì¬¿â°æ±¾ºÅ.
+\brief		ï¿½ï¿½È¡ï¿½ï¿½Ì¬ï¿½ï¿½æ±¾ï¿½ï¿½.
+\return         ï¿½ï¿½Ì¬ï¿½ï¿½æ±¾ï¿½ï¿½.
 
 \English
 \brief      Gets the library version number.
 \return     const char*   Library version number of string type.
 */
 //----------------------------------------------------------------------------------
-GX_EXTC GX_DLLEXPORT const char *GX_STDC GXGetLibVersion();
+GX_EXTC GX_DLLEXPORT const char * GX_STDC GXGetLibVersion();
 #endif
 
 //------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief		³õÊ¼»¯Éè±¸¿â¡£
-\attention	µ÷ÓÃÆäËû½Ó¿Ú£¨³ýÁËGXGetLastErrorºÍGXCloseLib£©Ö®Ç°±ØÐëÏÈµ÷ÓÃ´Ë½Ó¿Ú£¬µ±ÓÃ»§²»ÔÙÊ¹ÓÃ¿âµÄÊ±ºòµ÷ÓÃGXCloseLibÊÍ·Å¿â×ÊÔ´¡£
-			Èç¹ûÖ®Ç°ÓÃ»§ÒÑ¾­µ÷ÓÃ¹ýGXInitLib£¬Ã»ÓÐµ÷ÓÃGXCloseLib£¬¶øÔÙ´Îµ÷ÓÃGXInitLib½Ó¿Ú£¬½Ó¿Ú·µ»Ø³É¹¦¡£
-\return		GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_FOUND_TL			ÕÒ²»µ½TL¿â
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief		ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½è±¸ï¿½â¡£
+\attention	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½ï¿½GXGetLastErrorï¿½ï¿½GXCloseLibï¿½ï¿½Ö®Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Èµï¿½ï¿½Ã´Ë½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã¿ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½GXCloseLibï¿½Í·Å¿ï¿½ï¿½ï¿½Ô´ï¿½ï¿½
+			ï¿½ï¿½ï¿½Ö®Ç°ï¿½Ã»ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ã¹ï¿½GXInitLibï¿½ï¿½Ã»ï¿½Ðµï¿½ï¿½ï¿½GXCloseLibï¿½ï¿½ï¿½ï¿½ï¿½Ù´Îµï¿½ï¿½ï¿½GXInitLibï¿½Ó¿Ú£ï¿½ï¿½Ó¿Ú·ï¿½ï¿½Ø³É¹ï¿½ï¿½ï¿½
+\return		GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_FOUND_TL			ï¿½Ò²ï¿½ï¿½ï¿½TLï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief		Initialize the device library.
@@ -58,12 +58,12 @@ GX_API GXInitLib();
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief		¹Ø±ÕÉè±¸¿â£¬ÊÍ·Å×ÊÔ´
-\attention	ÊÍ·Å¿â×ÊÔ´£¬µ±ÓÃ»§²»ÔÙÊ¹ÓÃ¿âµÄÊ±ºòµ÷ÓÃ´Ë½Ó¿Ú¡£
-			Èç¹ûÓÃ»§Ö®Ç°Ã»ÓÐµ÷ÓÃGXInitLib£¬Ö±½Óµ÷ÓÃGXCloseLib£¬½Ó¿Ú·µ»Ø³É¹¦¡£
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief		ï¿½Ø±ï¿½ï¿½è±¸ï¿½â£¬ï¿½Í·ï¿½ï¿½ï¿½Ô´
+\attention	ï¿½Í·Å¿ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã¿ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ã´Ë½Ó¿Ú¡ï¿½
+			ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ö®Ç°Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ö±ï¿½Óµï¿½ï¿½ï¿½GXCloseLibï¿½ï¿½ï¿½Ó¿Ú·ï¿½ï¿½Ø³É¹ï¿½ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief		Close the device library to release resources.
@@ -77,15 +77,15 @@ GX_API GXCloseLib();
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÉèÖÃÖ¸¶¨ÀàÐÍµÄÈÕÖ¾¿É·¢ËÍ
-\attention  ´Ë½Ó¿ÚµÄ×÷ÓÃÊÇÉèÖÃÖ¸¶¨ÀàÐÍÈÕÖ¾¿É·¢ËÍ£¬µ÷ÓÃÖ®Ç°ÐèÒªµ÷ÓÃGXInitLib½Ó¿Ú
-\param      [in]ui32LogType                 ÈÕÖ¾ÀàÐÍ£º GX_LOG_TYPE_FATAL|GX_LOG_TYPE_ERROR|GX_LOG_TYPE_INFO
-                                                      GX_LOG_TYPE_OFF£º È«²¿²»¿É·¢ËÍ
-\return     GX_STATUS_SUCCESS               ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-            GX_STATUS_NOT_INIT_API          Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-            GX_STATUS_INVALID_ACCESS        ÅäÖÃÎÄ¼þÂ·¾¶´íÎó
-            ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½Ö¾ï¿½É·ï¿½ï¿½ï¿½
+\attention  ï¿½Ë½Ó¿Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½É·ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½GXInitLibï¿½Ó¿ï¿½
+\param      [in]ui32LogType                 ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½Í£ï¿½ GX_LOG_TYPE_FATAL|GX_LOG_TYPE_ERROR|GX_LOG_TYPE_INFO
+                                                      GX_LOG_TYPE_OFFï¿½ï¿½ È«ï¿½ï¿½ï¿½ï¿½ï¿½É·ï¿½ï¿½ï¿½
+\return     GX_STATUS_SUCCESS               ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_NOT_INIT_API          Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_INVALID_ACCESS        ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Set whether logs of the specified type can be sent
@@ -103,15 +103,15 @@ GX_API GXSetLogType(const uint32_t ui32LogType);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡Ö¸¶¨ÀàÐÍµÄÈÕÖ¾ÊÇ·ñ¿É·¢ËÍ
-\attention  ´Ë½Ó¿ÚµÄ×÷ÓÃÊÇ»ñÈ¡Ö¸¶¨ÀàÐÍÈÕÖ¾ÊÇ·ñ¿É·¢ËÍ£¬µ÷ÓÃÖ®Ç°ÐèÒªµ÷ÓÃGXInitLib½Ó¿Ú
-\param      [out]pui32Value                  ÈÕÖ¾ÀàÐÍÊÇ·ñ¿É·¢ËÍ£ºFATAL|ERROR|WARN|INFO|DEBUG|TRACE
-\return     GX_STATUS_SUCCESS               ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-            GX_STATUS_NOT_INIT_API          Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-            GX_STATUS_INVALID_PARAMETER     ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-            GX_STATUS_INVALID_ACCESS        ÅäÖÃÎÄ¼þÂ·¾¶´íÎó
-            ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½Ö¾ï¿½Ç·ï¿½É·ï¿½ï¿½ï¿½
+\attention  ï¿½Ë½Ó¿Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç»ï¿½È¡Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½Ç·ï¿½É·ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½GXInitLibï¿½Ó¿ï¿½
+\param      [out]pui32Value                  ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½É·ï¿½ï¿½Í£ï¿½FATAL|ERROR|WARN|INFO|DEBUG|TRACE
+\return     GX_STATUS_SUCCESS               ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_NOT_INIT_API          Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_INVALID_PARAMETER     ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+            GX_STATUS_INVALID_ACCESS        ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Gets whether logs of a specified type can be sent
@@ -125,25 +125,25 @@ GX_API GXSetLogType(const uint32_t ui32LogType);
             The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXGetLogType(uint32_t* pui32Value);
+GX_API GXGetLogType(uint32_t * pui32Value);
 
 //------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡³ÌÐò×îºóµÄ´íÎóÃèÊöÐÅÏ¢
-\attention  µ±ÓÃ»§µ÷ÓÃÆäËü½Ó¿ÚÊ§°ÜµÄÊ±ºò£¬¿ÉÒÔµ÷ÓÃ´Ë½Ó¿Ú»ñÈ¡¹ØÓÚÊ§°ÜÐÅÏ¢µÄÏêÏ¸ÃèÊö
-\param		[out] pErrorCode		·µ»Ø×îºóµÄ´íÎóÂë£¬Èç¹ûÓÃ»§²»Ïë»ñÈ¡´ËÖµ£¬ÄÇÃ´´Ë²ÎÊý¿ÉÒÔ´«NULL
-\param		[out] pszErrText		·µ»Ø´íÎóÐÅÏ¢»º³åÇøµØÖ·
-\param		[in,out] pSize			´íÎóÐÅÏ¢»º³åÇøµØÖ·´óÐ¡£¬µ¥Î»×Ö½Ú
-									Èç¹ûpszErrTextÎªNULL£º
-									[out]pnSize·µ»ØÊµ¼ÊÐèÒªµÄbuffer´óÐ¡
-									Èç¹ûpszErrText·ÇNULL£º
-									[in]pnSizeÎªÊµ¼Ê·ÖÅäµÄbuffer´óÐ¡
-									[out]pnSize·µ»ØÊµ¼ÊÌî³äbuffer´óÐ¡
-\return		GX_STATUS_SUCCESS                ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_INVALID_PARAMETER      ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_NEED_MORE_BUFFER       ÓÃ»§·ÖÅäµÄbuffer¹ýÐ¡
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+\attention  ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½Ê§ï¿½Üµï¿½Ê±ï¿½ò£¬¿ï¿½ï¿½Ôµï¿½ï¿½Ã´Ë½Ó¿Ú»ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½
+\param		[out] pErrorCode		ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ã´ï¿½Ë²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½NULL
+\param		[out] pszErrText		ï¿½ï¿½ï¿½Ø´ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·
+\param		[in,out] pSize			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ö½ï¿½
+									ï¿½ï¿½ï¿½pszErrTextÎªNULLï¿½ï¿½
+									[out]pnSizeï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½bufferï¿½ï¿½Ð¡
+									ï¿½ï¿½ï¿½pszErrTextï¿½ï¿½NULLï¿½ï¿½
+									[in]pnSizeÎªÊµï¿½Ê·ï¿½ï¿½ï¿½ï¿½bufferï¿½ï¿½Ð¡
+									[out]pnSizeï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½bufferï¿½ï¿½Ð¡
+\return		GX_STATUS_SUCCESS                ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_NEED_MORE_BUFFER       ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½bufferï¿½ï¿½Ð¡
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      To get the latest error descriptions information of the program.
@@ -166,18 +166,18 @@ GX_API GXGetLastError(GX_STATUS *pErrorCode, char *pszErrText, size_t *pSize);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief		Ã¶¾ÙÌØ¶¨ÀàÐÍÉè±¸²¢ÇÒ»ñÈ¡Éè±¸¸öÊý
-\attention	´Ë½Ó¿ÚµÄ×÷ÓÃÊÇ¸üÐÂ¿âÄÚ²¿Éè±¸ÁÐ±í£¬´Ë½Ó¿Ú»á¸Ä±ä¿âÄÚ²¿Éè±¸ÁÐ±í£¬
-			ËùÒÔµ÷ÓÃGXGetInterfaceInfo¡¢GXGetInterfaceNum¡¢GXGetInterfaceHandle¡¢GXGetDeviceInfoºÍGXOpenDeviceÖ®Ç°ÐèÒªµ÷ÓÃ´Ë½Ó¿Ú¡£
-			Èç¹ûÔÚÓÃ»§Ö¸¶¨³¬Ê±Ê±¼äÄÚ³É¹¦Ã¶¾Ùµ½Éè±¸£¬ÔòÁ¢¼´·µ»Ø£»Èç¹ûÔÚÓÃ»§Ö¸¶¨³¬Ê±Ê±¼äÄÚÃ»ÓÐÃ¶¾Ùµ½Éè±¸£¬ÔòÒ»Ö±µÈ´ý£¬Ö±µ½´ïµ½ÓÃ»§Ö¸¶¨µÄ³¬Ê±Ê±¼ä·µ»Ø¡£
-\param		[in]nTLType				Ã¶¾ÙÌØ¶¨ÀàÐÍµÄÉè±¸£¬²Î¿¼GX_TL_TYPE_LIST
-			[out]punNumDevices		·µ»ØÉè±¸¸öÊý
-\param		[in]unTimeOut			Ã¶¾ÙµÄ³¬Ê±Ê±¼ä(µ¥Î»ms)¡£
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER   ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief		Ã¶ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½Ò»ï¿½È¡ï¿½è±¸ï¿½ï¿½ï¿½ï¿½
+\attention	ï¿½Ë½Ó¿Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½Â¿ï¿½ï¿½Ú²ï¿½ï¿½è±¸ï¿½Ð±ï¿½ï¿½ï¿½ï¿½Ë½Ó¿Ú»ï¿½Ä±ï¿½ï¿½ï¿½Ú²ï¿½ï¿½è±¸ï¿½Ð±ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½GXGetInterfaceInfoï¿½ï¿½GXGetInterfaceNumï¿½ï¿½GXGetInterfaceHandleï¿½ï¿½GXGetDeviceInfoï¿½ï¿½GXOpenDeviceÖ®Ç°ï¿½ï¿½Òªï¿½ï¿½ï¿½Ã´Ë½Ó¿Ú¡ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ê±Ê±ï¿½ï¿½ï¿½Ú³É¹ï¿½Ã¶ï¿½Ùµï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ê±Ê±ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ã¶ï¿½Ùµï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½Ò»Ö±ï¿½È´ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ïµ½ï¿½Ã»ï¿½Ö¸ï¿½ï¿½ï¿½Ä³ï¿½Ê±Ê±ï¿½ä·µï¿½Ø¡ï¿½
+\param		[in]nTLType				Ã¶ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½è±¸ï¿½ï¿½ï¿½Î¿ï¿½GX_TL_TYPE_LIST
+			[out]punNumDevices		ï¿½ï¿½ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½
+\param		[in]unTimeOut			Ã¶ï¿½ÙµÄ³ï¿½Ê±Ê±ï¿½ï¿½(ï¿½ï¿½Î»ms)ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER   ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief		Enumerate a specific type of device and get the number of devices
@@ -194,21 +194,21 @@ GX_API GXGetLastError(GX_STATUS *pErrorCode, char *pszErrText, size_t *pSize);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXUpdateAllDeviceListEx( uint64_t nTLType, uint32_t* punNumDevices, uint32_t nTimeOut);
+GX_API GXUpdateAllDeviceListEx(uint64_t nTLType, uint32_t * punNumDevices, uint32_t nTimeOut);
 
 //----------------------------------------------------------------------------------
 /**
-\ Chinese£º
-\brief		Ã¶¾ÙËùÓÐÉè±¸²¢ÇÒ»ñÈ¡Éè±¸¸öÊý,¶ÔÓÚÇ§Õ×ÍøÉè±¸´Ë½Ó¿ÚÄÜ¹»Ã¶¾ÙËùÓÐ×ÓÍøÄÚµÄÉè±¸
-\attention	´Ë½Ó¿ÚµÄ×÷ÓÃÊÇ¸üÐÂ¿âÄÚ²¿Éè±¸ÁÐ±í£¬´Ë½Ó¿Ú»á¸Ä±ä¿âÄÚ²¿Éè±¸ÁÐ±í£¬
-			ËùÒÔµ÷ÓÃGXGetInterfaceInfo¡¢GXGetInterfaceNum¡¢GXGetInterfaceHandle¡¢GXGetDeviceInfoºÍGXOpenDeviceÖ®Ç°ÐèÒªµ÷ÓÃ´Ë½Ó¿Ú¡£
-			Èç¹ûÔÚÓÃ»§Ö¸¶¨³¬Ê±Ê±¼äÄÚ³É¹¦Ã¶¾Ùµ½Éè±¸£¬ÔòÁ¢¼´·µ»Ø£»Èç¹ûÔÚÓÃ»§Ö¸¶¨³¬Ê±Ê±¼äÄÚÃ»ÓÐÃ¶¾Ùµ½Éè±¸£¬ÔòÒ»Ö±µÈ´ý£¬Ö±µ½´ïµ½ÓÃ»§Ö¸¶¨µÄ³¬Ê±Ê±¼ä·µ»Ø
-\param		[out]punNumDevices			 ·µ»ØÉè±¸¸öÊý
-\param		[in]unTimeOut				 Ã¶¾ÙµÄ³¬Ê±Ê±¼ä(µ¥Î»ms)¡£
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER   ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\ Chineseï¿½ï¿½
+\brief		Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½Ò»ï¿½È¡ï¿½è±¸ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½Ç§ï¿½ï¿½ï¿½ï¿½ï¿½è±¸ï¿½Ë½Ó¿ï¿½ï¿½Ü¹ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½è±¸
+\attention	ï¿½Ë½Ó¿Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½Â¿ï¿½ï¿½Ú²ï¿½ï¿½è±¸ï¿½Ð±ï¿½ï¿½ï¿½ï¿½Ë½Ó¿Ú»ï¿½Ä±ï¿½ï¿½ï¿½Ú²ï¿½ï¿½è±¸ï¿½Ð±ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½GXGetInterfaceInfoï¿½ï¿½GXGetInterfaceNumï¿½ï¿½GXGetInterfaceHandleï¿½ï¿½GXGetDeviceInfoï¿½ï¿½GXOpenDeviceÖ®Ç°ï¿½ï¿½Òªï¿½ï¿½ï¿½Ã´Ë½Ó¿Ú¡ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ê±Ê±ï¿½ï¿½ï¿½Ú³É¹ï¿½Ã¶ï¿½Ùµï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ê±Ê±ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ã¶ï¿½Ùµï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½Ò»Ö±ï¿½È´ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ïµ½ï¿½Ã»ï¿½Ö¸ï¿½ï¿½ï¿½Ä³ï¿½Ê±Ê±ï¿½ä·µï¿½ï¿½
+\param		[out]punNumDevices			 ï¿½ï¿½ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½
+\param		[in]unTimeOut				 Ã¶ï¿½ÙµÄ³ï¿½Ê±Ê±ï¿½ï¿½(ï¿½ï¿½Î»ms)ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER   ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief		Enumerate all devices and obtain the number of devices,
@@ -225,30 +225,30 @@ GX_API GXUpdateAllDeviceListEx( uint64_t nTLType, uint32_t* punNumDevices, uint3
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXUpdateAllDeviceList      (uint32_t* punNumDevices, uint32_t nTimeOut);
+GX_API GXUpdateAllDeviceList(uint32_t * punNumDevices, uint32_t nTimeOut);
 
 //----------------------------------------------------------------------------------
 /**
-\ Chinese£º
-\brief		Í¨¹ý·¢ËÍActionCommondÃüÁîÊ¹ÍøÂçÉÏµÄÏà»úÍ¬Ê±Ö´ÐÐaction¶¯×÷
-\attention	ÇëÊ¹ÓÃIPV4µØÖ·£¬groupMask±ØÐë²»Îª0£¬Èç¹ûtimeoutMs²»Îª0ÔòpNumResults¡¢*pNumResults¡¢pResults±ØÐë²»Îª0
-\param      [in]deviceKey			         Ð­Òé¹æ¶¨µÄÉè±¸ÃØÔ¿
-\param      [in]groupKey			         Ð­Òé¹æ¶¨µÄ×éÃØÔ¿
-\param      [in]groupMask			         Ð­Òé¹æ¶¨µÄ×éÑÚÂë
-\param      [in]pBroadcastAddress			 ·¢ËÍcmdµÄÄ¿µÄip,¿ÉÎª¹ã²¥ip(255.255.255.255)¡¢×ÓÍø¹ã²¥(192.168.42.255)¡¢µ¥²¥(192.168.42.42)
-\param      [in]pSpecialAddress			     ¿ÉÑ¡£º·¢ËÍcmdµÄÔ´ip£¬ÓÃÓÚÃ÷È·µÄ±íÃæ´ÓÄÄ¸öÍø¿ÚÉÏ·¢ËÍÃüÁî£¬¿É½â¾ö¶àÍø¿¨Çé¿öÏÂÖØ¸´·¢ËÍcmdÎÊÌâ
-\                                            Èç¹û²»Ö¸¶¨µ±¹ã²¥¸ú×ÓÍø¹ã²¥Çé¿öÏÂµ±Ç°Ö÷»úµÄÃ¿Ò»¸ö·ûºÏµÄÍø¿¨¶¼»á·¢action
-\param      [in]timeoutMs			         ¿ÉÑ¡£ºÏìÓ¦ackµÄ³¬Ê±Ê±¼ä(ms)¡£Èç¹ûÒÑÊÕµ½ pNumResults£¬ÔòÍ£Ö¹µÈ´ýÈ·ÈÏ¡£
-\                                            Èç¹û²»ÐèÒª¼ì²é²Ù×÷ÃüÁî½á¹û£¬Ôò´Ë²ÎÊý¿ÉÒÔÎª 0¡£
-\param      [in][out]pNumResults			 ¿ÉÑ¡£º½á¹ûÊý×éÖÐµÄ½á¹ûÊý¡£
-\                                            ´«µÝµÄÖµÓ¦µÈÓÚÈ·ÈÏÃüÁîµÄÔ¤ÆÚÉè±¸ÊýÁ¿¡£
-\                                            Èç¹û timeoutMs Îª 0£¬ÔòºöÂÔ´Ë²ÎÊý¡£Òò´Ë£¬Èç¹û timeoutMs Îª 0£¬Ôò´Ë²ÎÊý¿ÉÒÔÎª NULL¡£
-\param      [in][out]pResults			     ¿ÉÑ¡£ºÒ»¸ö°üº¬ *pNumResults ÔªËØµÄÊý×é£¬ÓÃÓÚ±£´æ²Ù×÷ÃüÁî½á¹û×´Ì¬¡£»º³åÇø´ÓÍ·¿ªÊ¼Ìî³ä¡£
-\                                            Èç¹ûÊÕµ½µÄ½á¹ûÉÙÓÚ¿ÉÓÃµÄ½á¹ûÏî£¬Ôò²»»á¸ü¸ÄÊ£Óà½á¹û¡£
-\                                            Èç¹û timeoutMs Îª 0£¬ÔòºöÂÔ´Ë²ÎÊý¡£Òò´Ë£¬Èç¹û timeoutMs Îª 0£¬Ôò´Ë²ÎÊý¿ÉÒÔÎª NULL¡£
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\ Chineseï¿½ï¿½
+\brief		Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ActionCommondï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½Í¬Ê±Ö´ï¿½ï¿½actionï¿½ï¿½ï¿½ï¿½
+\attention	ï¿½ï¿½Ê¹ï¿½ï¿½IPV4ï¿½ï¿½Ö·ï¿½ï¿½groupMaskï¿½ï¿½ï¿½ë²»Îª0ï¿½ï¿½ï¿½ï¿½ï¿½timeoutMsï¿½ï¿½Îª0ï¿½ï¿½pNumResultsï¿½ï¿½*pNumResultsï¿½ï¿½pResultsï¿½ï¿½ï¿½ë²»Îª0
+\param      [in]deviceKey			         Ð­ï¿½ï¿½æ¶¨ï¿½ï¿½ï¿½è±¸ï¿½ï¿½Ô¿
+\param      [in]groupKey			         Ð­ï¿½ï¿½æ¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¿
+\param      [in]groupMask			         Ð­ï¿½ï¿½æ¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param      [in]pBroadcastAddress			 ï¿½ï¿½ï¿½ï¿½cmdï¿½ï¿½Ä¿ï¿½ï¿½ip,ï¿½ï¿½Îªï¿½ã²¥ip(255.255.255.255)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã²¥(192.168.42.255)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(192.168.42.42)
+\param      [in]pSpecialAddress			     ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½cmdï¿½ï¿½Ô´ipï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£¬ï¿½É½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½cmdï¿½ï¿½ï¿½ï¿½
+\                                            ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ã²¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã²¥ï¿½ï¿½ï¿½ï¿½Âµï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á·¢action
+\param      [in]timeoutMs			         ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ó¦ackï¿½Ä³ï¿½Ê±Ê±ï¿½ï¿½(ms)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½ pNumResultsï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½È´ï¿½È·ï¿½Ï¡ï¿½
+\                                            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª 0ï¿½ï¿½
+\param      [in][out]pNumResults			 ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\                                            ï¿½ï¿½ï¿½Ýµï¿½ÖµÓ¦ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¤ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\                                            ï¿½ï¿½ï¿½ timeoutMs Îª 0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ë²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ timeoutMs Îª 0ï¿½ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª NULLï¿½ï¿½
+\param      [in][out]pResults			     ï¿½ï¿½Ñ¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ *pNumResults Ôªï¿½Øµï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½Ê¼ï¿½ï¿½ä¡£
+\                                            ï¿½ï¿½ï¿½ï¿½Õµï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ÃµÄ½ï¿½ï¿½ï¿½î£¬ï¿½ò²»»ï¿½ï¿½ï¿½ï¿½Ê£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\                                            ï¿½ï¿½ï¿½ timeoutMs Îª 0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ë²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ timeoutMs Îª 0ï¿½ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª NULLï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief		Sending the ActionCommon command allows cameras on the network to execute actions simultaneously.
@@ -257,54 +257,55 @@ GX_API GXUpdateAllDeviceList      (uint32_t* punNumDevices, uint32_t nTimeOut);
 \param      [in]groupKey			         The group key specified by the protocol
 \param      [in]groupMask			         Protocol-defined group mask
 \param      [in]pBroadcastAddress			 The destination IP to send cmd to can be broadcast IP (255.255.255.255), subnet broadcast (192.168.42.255), unicast (192.168.42.42)
-\param      [in]pSpecialAddress			     The source IP of the cmd is used to clearly identify the network port from which the command is sent. 
+\param      [in]pSpecialAddress			     The source IP of the cmd is used to clearly identify the network port from which the command is sent.
 \                                            This can solve the problem of repeated cmd sending in the case of multiple network cards.
-\param      [in]timeoutMs			         Optional: Time in milliseconds the call is waiting for acknowledges of the addressed devices. 
-\                                            Waiting for acknowledges is stopped if pNumResults have been received. 
+\param      [in]timeoutMs			         Optional: Time in milliseconds the call is waiting for acknowledges of the addressed devices.
+\                                            Waiting for acknowledges is stopped if pNumResults have been received.
 \                                            This parameter can be 0 if a check of action command results is not required.
-\param      [in][out]pNumResults			 Optional: The number of results in the results array. 
-\                                            The value passed should be equal to the expected number of devices that acknowledge the command. 
-\                                            Returns the number of received results. This parameter is ignored if timeoutMs is 0. 
+\param      [in][out]pNumResults			 Optional: The number of results in the results array.
+\                                            The value passed should be equal to the expected number of devices that acknowledge the command.
+\                                            Returns the number of received results. This parameter is ignored if timeoutMs is 0.
 \                                            Thus, this parameter can be NULL if timeoutMs is 0.
-\param      [in][out]pResults			     Optional: An array with *pNumResults elements to hold the action command result status. 
-\                                            The buffer is filled beginning from the start. 
-\                                            Remaining results are not changed if less results are received than result items available. 
+\param      [in][out]pResults			     Optional: An array with *pNumResults elements to hold the action command result status.
+\                                            The buffer is filled beginning from the start.
+\                                            Remaining results are not changed if less results are received than result items available.
 \                                            This parameter is ignored if timeoutMs is 0. Thus, this parameter can be NULL if timeoutMs is 0.
 \return		GX_STATUS_SUCCESS                The operation was successful and no errors occurred
             GX_STATUS_NOT_INIT_API            GXInitLib is not called to initialize the library
             For other error conditions, see GX_STATUS_LIST
 */
 //----------------------------------------------------------------------------------
-GX_API GXGigEIssueActionCommand( uint32_t nDeviceKey, uint32_t nGroupKey, 
-                                uint32_t nGroupMask, const char* strBroadcastAddress, 
-                                const char* strSpecialAddress, uint32_t nTimeoutMs, 
-                                uint32_t* pnNumResults, GX_GIGE_ACTION_COMMAND_RESULT* pstResults );
+GX_API GXGigEIssueActionCommand(
+  uint32_t nDeviceKey, uint32_t nGroupKey,
+  uint32_t nGroupMask, const char * strBroadcastAddress,
+  const char * strSpecialAddress, uint32_t nTimeoutMs,
+  uint32_t * pnNumResults, GX_GIGE_ACTION_COMMAND_RESULT * pstResults);
 
 //----------------------------------------------------------------------------------
 /**
-\ Chinese£º
-\brief		Í¨¹ý·¢ËÍActionCommondÃüÁîÊ¹ÍøÂçÉÏµÄÏà»úÍ¬Ê±Ö´ÐÐaction¶¯×÷
-\attention	ÇëÊ¹ÓÃIPV4µØÖ·£¬groupMask±ØÐë²»Îª0£¬Èç¹ûtimeoutMs²»Îª0ÔòpNumResults¡¢*pNumResults¡¢pResults±ØÐë²»Îª0
-\param      [in]deviceKey			         Ð­Òé¹æ¶¨µÄÉè±¸ÃØÔ¿
-\param      [in]groupKey			         Ð­Òé¹æ¶¨µÄ×éÃØÔ¿
-\param      [in]groupMask			         Ð­Òé¹æ¶¨µÄ×éÑÚÂë
-\param      [in]pBroadcastAddress			 ·¢ËÍcmdµÄÄ¿µÄip,¿ÉÎª¹ã²¥ip(255.255.255.255)¡¢×ÓÍø¹ã²¥(192.168.42.255)¡¢µ¥²¥(192.168.42.42)
-\param      [in]actiontimeNs			     Ö´ÐÐ²Ù×÷µÄÊ±¼ä£¨ÒÔÄÉÃëÎªµ¥Î»£©¡£Êµ¼ÊÖµÈ¡¾öÓÚËùÊ¹ÓÃµÄÖ÷Ê±ÖÓ¡£
-\                                            ÀýÈç£¬¿ÉÒÔÍ¨¹ýÔÚ´ÓÒ»×éÏà»úÉè±¸ÖÐËø´æÊ±¼ä´ÁÖµGXSetCommandValue(hDevice, "TimestampLatch")
-\                                            ºó¶ÁÈ¡Ê±¼ä´ÁÖµGXGetIntValue(hDevice, "TimestampLatchValue", &pstIntValue) À´»ñÈ¡Ò»×éÍ¬²½Ïà»úÉè±¸µÄÖ÷Ê±ÖÓÖµ¡£
-\param      [in]pSpecialAddress			     ¿ÉÑ¡£º·¢ËÍcmdµÄÔ´ip£¬ÓÃÓÚÃ÷È·µÄ±íÃæ´ÓÄÄ¸öÍø¿ÚÉÏ·¢ËÍÃüÁî£¬¿É½â¾ö¶àÍø¿¨Çé¿öÏÂÖØ¸´·¢ËÍcmdÎÊÌâ,
-\                                            Èç¹û²»Ö¸¶¨µ±¹ã²¥¸ú×ÓÍø¹ã²¥Çé¿öÏÂµ±Ç°Ö÷»úµÄÃ¿Ò»¸ö·ûºÏµÄÍø¿¨¶¼»á·¢action
-\param      [in]timeoutMs			         ¿ÉÑ¡£ºÏìÓ¦ackµÄ³¬Ê±Ê±¼ä(ms)¡£Èç¹ûÒÑÊÕµ½ pNumResults£¬ÔòÍ£Ö¹µÈ´ýÈ·ÈÏ¡£
-\                                            Èç¹û²»ÐèÒª¼ì²é²Ù×÷ÃüÁî½á¹û£¬Ôò´Ë²ÎÊý¿ÉÒÔÎª 0¡£
-\param      [in][out]pNumResults			 ¿ÉÑ¡£º½á¹ûÊý×éÖÐµÄ½á¹ûÊý¡£
-\                                            ´«µÝµÄÖµÓ¦µÈÓÚÈ·ÈÏÃüÁîµÄÔ¤ÆÚÉè±¸ÊýÁ¿¡£
-\                                            Èç¹û timeoutMs Îª 0£¬ÔòºöÂÔ´Ë²ÎÊý¡£Òò´Ë£¬Èç¹û timeoutMs Îª 0£¬Ôò´Ë²ÎÊý¿ÉÒÔÎª NULL¡£
-\param      [in][out]pResults			     ¿ÉÑ¡£ºÒ»¸ö°üº¬ *pNumResults ÔªËØµÄÊý×é£¬ÓÃÓÚ±£´æ²Ù×÷ÃüÁî½á¹û×´Ì¬¡£»º³åÇø´ÓÍ·¿ªÊ¼Ìî³ä¡£
-\                                            Èç¹ûÊÕµ½µÄ½á¹ûÉÙÓÚ¿ÉÓÃµÄ½á¹ûÏî£¬Ôò²»»á¸ü¸ÄÊ£Óà½á¹û¡£
-\                                            Èç¹û timeoutMs Îª 0£¬ÔòºöÂÔ´Ë²ÎÊý¡£Òò´Ë£¬Èç¹û timeoutMs Îª 0£¬Ôò´Ë²ÎÊý¿ÉÒÔÎª NULL¡£
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\ Chineseï¿½ï¿½
+\brief		Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ActionCommondï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½Í¬Ê±Ö´ï¿½ï¿½actionï¿½ï¿½ï¿½ï¿½
+\attention	ï¿½ï¿½Ê¹ï¿½ï¿½IPV4ï¿½ï¿½Ö·ï¿½ï¿½groupMaskï¿½ï¿½ï¿½ë²»Îª0ï¿½ï¿½ï¿½ï¿½ï¿½timeoutMsï¿½ï¿½Îª0ï¿½ï¿½pNumResultsï¿½ï¿½*pNumResultsï¿½ï¿½pResultsï¿½ï¿½ï¿½ë²»Îª0
+\param      [in]deviceKey			         Ð­ï¿½ï¿½æ¶¨ï¿½ï¿½ï¿½è±¸ï¿½ï¿½Ô¿
+\param      [in]groupKey			         Ð­ï¿½ï¿½æ¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¿
+\param      [in]groupMask			         Ð­ï¿½ï¿½æ¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param      [in]pBroadcastAddress			 ï¿½ï¿½ï¿½ï¿½cmdï¿½ï¿½Ä¿ï¿½ï¿½ip,ï¿½ï¿½Îªï¿½ã²¥ip(255.255.255.255)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã²¥(192.168.42.255)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(192.168.42.42)
+\param      [in]actiontimeNs			     Ö´ï¿½Ð²ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ÖµÈ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ãµï¿½ï¿½ï¿½Ê±ï¿½Ó¡ï¿½
+\                                            ï¿½ï¿½ï¿½ç£¬ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½Ú´ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ÖµGXSetCommandValue(hDevice, "TimestampLatch")
+\                                            ï¿½ï¿½ï¿½È¡Ê±ï¿½ï¿½ï¿½ÖµGXGetIntValue(hDevice, "TimestampLatchValue", &pstIntValue) ï¿½ï¿½ï¿½ï¿½È¡Ò»ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Öµï¿½ï¿½
+\param      [in]pSpecialAddress			     ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½cmdï¿½ï¿½Ô´ipï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£¬ï¿½É½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½cmdï¿½ï¿½ï¿½ï¿½,
+\                                            ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ã²¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã²¥ï¿½ï¿½ï¿½ï¿½Âµï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á·¢action
+\param      [in]timeoutMs			         ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ó¦ackï¿½Ä³ï¿½Ê±Ê±ï¿½ï¿½(ms)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½ pNumResultsï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½È´ï¿½È·ï¿½Ï¡ï¿½
+\                                            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª 0ï¿½ï¿½
+\param      [in][out]pNumResults			 ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\                                            ï¿½ï¿½ï¿½Ýµï¿½ÖµÓ¦ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¤ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\                                            ï¿½ï¿½ï¿½ timeoutMs Îª 0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ë²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ timeoutMs Îª 0ï¿½ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª NULLï¿½ï¿½
+\param      [in][out]pResults			     ï¿½ï¿½Ñ¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ *pNumResults Ôªï¿½Øµï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½Ê¼ï¿½ï¿½ä¡£
+\                                            ï¿½ï¿½ï¿½ï¿½Õµï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ÃµÄ½ï¿½ï¿½ï¿½î£¬ï¿½ò²»»ï¿½ï¿½ï¿½ï¿½Ê£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\                                            ï¿½ï¿½ï¿½ timeoutMs Îª 0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ë²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ timeoutMs Îª 0ï¿½ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª NULLï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief		Sending the ActionCommon command allows cameras on the network to execute actions simultaneously.
@@ -313,44 +314,45 @@ GX_API GXGigEIssueActionCommand( uint32_t nDeviceKey, uint32_t nGroupKey,
 \param      [in]groupKey			         The group key specified by the protocol
 \param      [in]groupMask			         Protocol-defined group mask
 \param      [in]actiontimeNs                 The time in nanoseconds to perform the operation.The actual value depends on the master clock used.
-\                                            For example, the master clock value of a set of synchronized camera devices can be obtained by reading the 
+\                                            For example, the master clock value of a set of synchronized camera devices can be obtained by reading the
 \                                            timestamp value GXGetIntValue(hDevice, "TimestampLatch") after latching it from the set of camera devices
 \param      [in]pBroadcastAddress			 The destination IP to send cmd to can be broadcast IP (255.255.255.255), subnet broadcast (192.168.42.255), unicast (192.168.42.42)
-\param      [in]pSpecialAddress			     Optional: The source IP of the cmd is used to clearly identify the network port from which the command is sent. 
+\param      [in]pSpecialAddress			     Optional: The source IP of the cmd is used to clearly identify the network port from which the command is sent.
 \                                            This can solve the problem of repeated cmd sending in the case of multiple network cards.
-\param      [in]timeoutMs			         Optional: Time in milliseconds the call is waiting for acknowledges of the addressed devices. 
-\                                            Waiting for acknowledges is stopped if pNumResults have been received. 
+\param      [in]timeoutMs			         Optional: Time in milliseconds the call is waiting for acknowledges of the addressed devices.
+\                                            Waiting for acknowledges is stopped if pNumResults have been received.
 \                                            This parameter can be 0 if a check of action command results is not required.
-\param      [in][out]pNumResults			 Optional: The number of results in the results array. 
-\                                            The value passed should be equal to the expected number of devices that acknowledge the command. 
-\                                            Returns the number of received results. This parameter is ignored if timeoutMs is 0. 
+\param      [in][out]pNumResults			 Optional: The number of results in the results array.
+\                                            The value passed should be equal to the expected number of devices that acknowledge the command.
+\                                            Returns the number of received results. This parameter is ignored if timeoutMs is 0.
                                              Thus, this parameter can be NULL if timeoutMs is 0.
-\param      [in][out]pResults			     Optional: An array with *pNumResults elements to hold the action command result status. 
-\                                            The buffer is filled beginning from the start. 
-\                                            Remaining results are not changed if less results are received than result items available. 
+\param      [in][out]pResults			     Optional: An array with *pNumResults elements to hold the action command result status.
+\                                            The buffer is filled beginning from the start.
+\                                            Remaining results are not changed if less results are received than result items available.
 \                                            This parameter is ignored if timeoutMs is 0. Thus, this parameter can be NULL if timeoutMs is 0.
 \return		GX_STATUS_SUCCESS                The operation was successful and no errors occurred
             GX_STATUS_NOT_INIT_API            GXInitLib is not called to initialize the library
             For other error conditions, see GX_STATUS_LIST
 */
 //----------------------------------------------------------------------------------
-GX_API GXGigEIssueScheduledActionCommand( uint32_t nDeviceKey, uint32_t nGroupKey, 
-                                         uint32_t nGroupMask, uint64_t nActiontimeNs, 
-                                         const char* strBroadcastAddress, const char* strSpecialAddress, 
-                                         uint32_t nTimeoutMs, uint32_t* pnNumResults, 
-                                         GX_GIGE_ACTION_COMMAND_RESULT* pstResults );
+GX_API GXGigEIssueScheduledActionCommand(
+  uint32_t nDeviceKey, uint32_t nGroupKey,
+  uint32_t nGroupMask, uint64_t nActiontimeNs,
+  const char * strBroadcastAddress, const char * strSpecialAddress,
+  uint32_t nTimeoutMs, uint32_t * pnNumResults,
+  GX_GIGE_ACTION_COMMAND_RESULT * pstResults);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡Ã¶¾Ùµ½µÄInterfaceÁÐ±íÊýÁ¿
-\attention  ´Ë½Ó¿ÚµÄ×÷ÓÃÊÇ»ñÈ¡Ã¶¾Ùµ½µÄInterfaceÊýÁ¿£¬
-			µ÷ÓÃÖ®Ç°ÐèÒªµ÷ÓÃGXUpdateAllDeviceList¡¢GXUpdateAllDeviceListEx½Ó¿Ú¡£
-\param      [in,out]punNumInterfaces      ·µ»ØInterface¸öÊý
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER   ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡Ã¶ï¿½Ùµï¿½ï¿½ï¿½Interfaceï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½
+\attention  ï¿½Ë½Ó¿Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç»ï¿½È¡Ã¶ï¿½Ùµï¿½ï¿½ï¿½Interfaceï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½GXUpdateAllDeviceListï¿½ï¿½GXUpdateAllDeviceListExï¿½Ó¿Ú¡ï¿½
+\param      [in,out]punNumInterfaces      ï¿½ï¿½ï¿½ï¿½Interfaceï¿½ï¿½ï¿½ï¿½
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER   ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Obtain the number of interface lists enumerated.
@@ -363,20 +365,20 @@ GX_API GXGigEIssueScheduledActionCommand( uint32_t nDeviceKey, uint32_t nGroupKe
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXGetInterfaceNum(uint32_t* punNumInterfaces);
+GX_API GXGetInterfaceNum(uint32_t * punNumInterfaces);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡´ÎÐòÎªIndexµÄInterfaceÐÅÏ¢
-\attention  ´Ë½Ó¿ÚµÄ×÷ÓÃÊÇ»ñÈ¡Ã¶¾Ùµ½Interface½Ó¿Ú£¬
-            µ÷ÓÃÖ®Ç°ÐèÒªµ÷ÓÃGXUpdateAllDeviceList¡¢GXUpdateAllDeviceListEx½Ó¿Ú
-\param      [in]nIndex					Interface ´ÎÐò£¬´Ó¿ªÊ¼ 1
-            [in,out]pstInterfaceInfo	·µ»ØInterfaceÐÅÏ¢
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-            GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-            GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-            ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ÎªIndexï¿½ï¿½Interfaceï¿½ï¿½Ï¢
+\attention  ï¿½Ë½Ó¿Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç»ï¿½È¡Ã¶ï¿½Ùµï¿½Interfaceï¿½Ó¿Ú£ï¿½
+            ï¿½ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½GXUpdateAllDeviceListï¿½ï¿½GXUpdateAllDeviceListExï¿½Ó¿ï¿½
+\param      [in]nIndex					Interface ï¿½ï¿½ï¿½ò£¬´Ó¿ï¿½Ê¼ 1
+            [in,out]pstInterfaceInfo	ï¿½ï¿½ï¿½ï¿½Interfaceï¿½ï¿½Ï¢
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Obtain basic interface information nIndex device.
@@ -390,20 +392,20 @@ GX_API GXGetInterfaceNum(uint32_t* punNumInterfaces);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXGetInterfaceInfo(uint32_t nIndex, GX_INTERFACE_INFO* pstInterfaceInfo);
+GX_API GXGetInterfaceInfo(uint32_t nIndex, GX_INTERFACE_INFO * pstInterfaceInfo);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡´ÎÐòÎªIndexµÄInterface Handle
-\attention  ´Ë½Ó¿ÚµÄ×÷ÓÃÊÇ»ñÈ¡Ã¶¾Ùµ½Interface HandleµÄ½Ó¿Ú£¬
-            µ÷ÓÃÖ®Ç°ÐèÒªµ÷ÓÃGXUpdateAllDeviceList¡¢GXUpdateAllDeviceListEx½Ó¿Ú
-\param      [in]nIndex              Interface´ÎÐò£¬´Ó1¿ªÊ¼
-            [in,out]phIF			·µ»ØInterface¾ä±ú
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-            GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-            GX_STATUS_INVALID_PARAMETER   ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-            ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ÎªIndexï¿½ï¿½Interface Handle
+\attention  ï¿½Ë½Ó¿Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç»ï¿½È¡Ã¶ï¿½Ùµï¿½Interface Handleï¿½Ä½Ó¿Ú£ï¿½
+            ï¿½ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½GXUpdateAllDeviceListï¿½ï¿½GXUpdateAllDeviceListExï¿½Ó¿ï¿½
+\param      [in]nIndex              Interfaceï¿½ï¿½ï¿½ò£¬´ï¿½1ï¿½ï¿½Ê¼
+            [in,out]phIF			ï¿½ï¿½ï¿½ï¿½Interfaceï¿½ï¿½ï¿½
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_INVALID_PARAMETER   ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Get Interface Handles of Index.
@@ -417,20 +419,20 @@ GX_API GXGetInterfaceInfo(uint32_t nIndex, GX_INTERFACE_INFO* pstInterfaceInfo);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXGetInterfaceHandle(uint32_t nIndex, GX_IF_HANDLE* phIF);
+GX_API GXGetInterfaceHandle(uint32_t nIndex, GX_IF_HANDLE * phIF);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡´ÎÐòÎªIndexµÄÉè±¸ÐÅÏ¢
-\attention  ´Ë½Ó¿ÚµÄ×÷ÓÃÊÇ»ñÈ¡Ã¶¾Ùµ½Éè±¸ÐÅÏ¢½Ó¿Ú£¬
-            µ÷ÓÃÖ®Ç°ÐèÒªµ÷ÓÃGXUpdateAllDeviceList¡¢GXUpdateAllDeviceListEx½Ó¿Ú
-\param      [in]nIndex                    Éè±¸´ÎÐò£¬´Ó1¿ªÊ¼
-            [in,out]pstDeviceInfo         ·µ»ØÉè±¸ÐÅÏ¢
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-            GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-            GX_STATUS_INVALID_PARAMETER   ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-            ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ÎªIndexï¿½ï¿½ï¿½è±¸ï¿½ï¿½Ï¢
+\attention  ï¿½Ë½Ó¿Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç»ï¿½È¡Ã¶ï¿½Ùµï¿½ï¿½è±¸ï¿½ï¿½Ï¢ï¿½Ó¿Ú£ï¿½
+            ï¿½ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½GXUpdateAllDeviceListï¿½ï¿½GXUpdateAllDeviceListExï¿½Ó¿ï¿½
+\param      [in]nIndex                    ï¿½è±¸ï¿½ï¿½ï¿½ò£¬´ï¿½1ï¿½ï¿½Ê¼
+            [in,out]pstDeviceInfo         ï¿½ï¿½ï¿½ï¿½ï¿½è±¸ï¿½ï¿½Ï¢
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_INVALID_PARAMETER   ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Obtain basic information of nIndex devices
@@ -444,21 +446,21 @@ GX_API GXGetInterfaceHandle(uint32_t nIndex, GX_IF_HANDLE* phIF);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXGetDeviceInfo(uint32_t nIndex, GX_DEVICE_INFO* pstDeviceInfo);
+GX_API GXGetDeviceInfo(uint32_t nIndex, GX_DEVICE_INFO * pstDeviceInfo);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief		Í¨¹ýÖ¸¶¨Î¨Ò»±êÊ¾´ò¿ªÉè±¸£¬ÀýÈçÖ¸¶¨SN¡¢IP¡¢MACµÈ
-\attention	´Ë½Ó¿Úµ÷ÓÃÖ®Ç°ÐèÒªµ÷ÓÃGXUpdateAllDeviceList¡¢GXUpdateAllDeviceListEx½Ó¿Ú£¬¸üÐÂ¿âÄÚ²¿Éè±¸ÁÐ±í
-\param		[in]pOpenParam		ÓÃ»§ÅäÖÃµÄ´ò¿ªÉè±¸²ÎÊý,²Î¼ûGX_OPEN_PARAM½á¹¹Ìå¶¨Òå
-\param		[out]phDevice		·µ»ØÉè±¸¾ä±ú
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER   ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_NOT_FOUND_DEVICE    Ã»ÓÐÕÒµ½ÓëÖ¸¶¨ÐÅÏ¢Æ¥ÅäµÄÉè±¸
-			GX_STATUS_INVALID_ACCESS      Éè±¸µÄ·ÃÎÊ·½Ê½²»¶Ô
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief		Í¨ï¿½ï¿½Ö¸ï¿½ï¿½Î¨Ò»ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½SNï¿½ï¿½IPï¿½ï¿½MACï¿½ï¿½
+\attention	ï¿½Ë½Ó¿Úµï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½GXUpdateAllDeviceListï¿½ï¿½GXUpdateAllDeviceListExï¿½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½Â¿ï¿½ï¿½Ú²ï¿½ï¿½è±¸ï¿½Ð±ï¿½
+\param		[in]pOpenParam		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ÃµÄ´ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½,ï¿½Î¼ï¿½GX_OPEN_PARAMï¿½á¹¹ï¿½å¶¨ï¿½ï¿½
+\param		[out]phDevice		ï¿½ï¿½ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER   ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_NOT_FOUND_DEVICE    Ã»ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ï¢Æ¥ï¿½ï¿½ï¿½ï¿½è±¸
+			GX_STATUS_INVALID_ACCESS      ï¿½è±¸ï¿½Ä·ï¿½ï¿½Ê·ï¿½Ê½ï¿½ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief		Open the device by a specific unique identification, such as: SN, IP, MAC, Index etc.
@@ -473,18 +475,18 @@ GX_API GXGetDeviceInfo(uint32_t nIndex, GX_DEVICE_INFO* pstDeviceInfo);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXOpenDevice               (GX_OPEN_PARAM* pOpenParam, GX_DEV_HANDLE* phDevice);
+GX_API GXOpenDevice(GX_OPEN_PARAM * pOpenParam, GX_DEV_HANDLE * phDevice);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief		Ö¸¶¨Éè±¸¾ä±ú¹Ø±ÕÉè±¸
-\attention	²»ÄÜÖØ¸´¹Ø±ÕÍ¬Ò»¸öÉè±¸
-\param		[in]hDevice			¼´½«Òª¹Ø±ÕµÄÉè±¸¾ä±ú
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief		Ö¸ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½Ø±ï¿½ï¿½è±¸
+\attention	ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½Ø±ï¿½Í¬Ò»ï¿½ï¿½ï¿½è±¸
+\param		[in]hDevice			ï¿½ï¿½ï¿½ï¿½Òªï¿½Ø±Õµï¿½ï¿½è±¸ï¿½ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief		Specify the device handle to close the device.
@@ -496,20 +498,20 @@ GX_API GXOpenDevice               (GX_OPEN_PARAM* pOpenParam, GX_DEV_HANDLE* phD
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXCloseDevice              (GX_DEV_HANDLE hDevice);
+GX_API GXCloseDevice(GX_DEV_HANDLE hDevice);
 
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡Éè±¸ËùÊôµÄInterface¾ä±ú
-\param		[in]hDevice			    Éè±¸handle
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Interfaceï¿½ï¿½ï¿½
+\param		[in]hDevice			    ï¿½è±¸handle
 \param		[in,out]phIF            Interface Handle
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-            GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-            GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-            ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Obtain the device's interface handle.
@@ -522,20 +524,20 @@ GX_API GXCloseDevice              (GX_DEV_HANDLE hDevice);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXGetParentInterfaceFromDev(GX_DEV_HANDLE hDevice, GX_IF_HANDLE* phIF);
+GX_API GXGetParentInterfaceFromDev(GX_DEV_HANDLE hDevice, GX_IF_HANDLE * phIF);
 
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡±¾µØÉè±¸handle
-\param		[in]hDevice			    Éè±¸handle
-\param		[in,out]phLocalDev      ±¾µØÉè±¸Handle
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-            GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-            GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-            ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½è±¸handle
+\param		[in]hDevice			    ï¿½è±¸handle
+\param		[in,out]phLocalDev      ï¿½ï¿½ï¿½ï¿½ï¿½è±¸Handle
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Get local device handle.
@@ -548,19 +550,19 @@ GX_API GXGetParentInterfaceFromDev(GX_DEV_HANDLE hDevice, GX_IF_HANDLE* phIF);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXGetLocalDeviceHandleFromDev(GX_DEV_HANDLE hDevice, GX_LOCAL_DEV_HANDLE* phLocalDev);
+GX_API GXGetLocalDeviceHandleFromDev(GX_DEV_HANDLE hDevice, GX_LOCAL_DEV_HANDLE * phLocalDev);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡Éè±¸Á÷Í¨µÀÊýÁ¿
-\param		[in]hDevice			    Éè±¸handle
-\param		[in|out]pnDSNum         Éè±¸Á÷Í¨µÀÊýÁ¿
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-            GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-            GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-            ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡ï¿½è±¸ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]hDevice			    ï¿½è±¸handle
+\param		[in|out]pnDSNum         ï¿½è±¸ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Obtain the number of data stream.
@@ -573,20 +575,20 @@ GX_API GXGetLocalDeviceHandleFromDev(GX_DEV_HANDLE hDevice, GX_LOCAL_DEV_HANDLE*
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXGetDataStreamNumFromDev(GX_DEV_HANDLE hDevice, uint32_t* pnDSNum);
+GX_API GXGetDataStreamNumFromDev(GX_DEV_HANDLE hDevice, uint32_t * pnDSNum);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡Éè±¸Á÷Í¨µÀ¾ä±ú
-\param		[in]hDevice			    Éè±¸handle
-\param		[in]nDSIndex			Éè±¸Á÷ÐòºÅ£¬ÐòºÅ´Ó1 ¿ªÊ¼
-\param		[in|out]phDS            Éè±¸Á÷handle
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-            GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-            GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-            ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡ï¿½è±¸ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]hDevice			    ï¿½è±¸handle
+\param		[in]nDSIndex			ï¿½è±¸ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½ï¿½Å´ï¿½1 ï¿½ï¿½Ê¼
+\param		[in|out]phDS            ï¿½è±¸ï¿½ï¿½handle
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Get data stream handle.
@@ -600,30 +602,30 @@ GX_API GXGetDataStreamNumFromDev(GX_DEV_HANDLE hDevice, uint32_t* pnDSNum);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXGetDataStreamHandleFromDev(GX_DEV_HANDLE hDevice, uint32_t nDSIndex, GX_DS_HANDLE* phDS);
+GX_API GXGetDataStreamHandleFromDev(GX_DEV_HANDLE hDevice, uint32_t nDSIndex, GX_DS_HANDLE * phDS);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief     »ñÈ¡Éè±¸µÄÓÀ¾ÃIPÐÅÏ¢
-\attention ¸Ã½Ó¿ÚÖ»ÊÊÓÃÓÚÍøÂçÉè±¸
-\param     [in]       hDevice                  Éè±¸¾ä±ú
-\param     [in]       pszIP                    Éè±¸ÓÀ¾ÃIP×Ö·û´®µØÖ·
-\param     [in, out]  pnIPLength               Éè±¸ÓÀ¾ÃIPµØÖ·×Ö·û´®³¤¶È,µ¥Î»×Ö½Ú¡£
-\param     [in]       pnIPLength:              ÓÃ»§buffer´óÐ¡
-\param     [out]      pnIPLength:              Êµ¼ÊÌî³ä´óÐ¡
-\param     [in]       pszSubNetMask            Éè±¸ÓÀ¾Ã×ÓÍøÑÚÂë×Ö·û´®µØÖ·
-\param     [in, out]  pnSubNetMaskLength       Éè±¸ÓÀ¾Ã×ÓÍøÑÚÂë×Ö·û´®³¤¶È
-\param     [in]       pnSubNetMaskLength:      ÓÃ»§buffer´óÐ¡
-\param     [out]      pnSubNetMaskLength:      Êµ¼ÊÌî³ä´óÐ¡
-\param     [in]       pszDefaultGateWay        Éè±¸ÓÀ¾ÃÍø¹Ø×Ö·û´®µØÖ·
-\param     [in, out]  pnDefaultGateWayLength   Éè±¸ÓÀ¾ÃÍø¹Ø×Ö·û´®³¤¶È
-\param     [in]       pnDefaultGateWayLength:  ÓÃ»§buffer´óÐ¡
-\param     [out]      pnDefaultGateWayLength:  Êµ¼ÊÌî³ä´óÐ¡
-\return    GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-		   GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-		   GX_STATUS_INVALID_PARAMETER   ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-		   ÉÏÃæÃ»ÓÐº­¸Çµ½µÄ£¬²»³£¼ûµÄ´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief     ï¿½ï¿½È¡ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½IPï¿½ï¿½Ï¢
+\attention ï¿½Ã½Ó¿ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è±¸
+\param     [in]       hDevice                  ï¿½è±¸ï¿½ï¿½ï¿½
+\param     [in]       pszIP                    ï¿½è±¸ï¿½ï¿½ï¿½ï¿½IPï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Ö·
+\param     [in, out]  pnIPLength               ï¿½è±¸ï¿½ï¿½ï¿½ï¿½IPï¿½ï¿½Ö·ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Î»ï¿½Ö½Ú¡ï¿½
+\param     [in]       pnIPLength:              ï¿½Ã»ï¿½bufferï¿½ï¿½Ð¡
+\param     [out]      pnIPLength:              Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡
+\param     [in]       pszSubNetMask            ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Ö·
+\param     [in, out]  pnSubNetMaskLength       ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param     [in]       pnSubNetMaskLength:      ï¿½Ã»ï¿½bufferï¿½ï¿½Ð¡
+\param     [out]      pnSubNetMaskLength:      Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡
+\param     [in]       pszDefaultGateWay        ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Ö·
+\param     [in, out]  pnDefaultGateWayLength   ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param     [in]       pnDefaultGateWayLength:  ï¿½Ã»ï¿½bufferï¿½ï¿½Ð¡
+\param     [out]      pnDefaultGateWayLength:  Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡
+\return    GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		   GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+		   GX_STATUS_INVALID_PARAMETER   ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+		   ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ðºï¿½ï¿½Çµï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief     Obtain the permanent IP information of the device.
@@ -647,66 +649,68 @@ GX_API GXGetDataStreamHandleFromDev(GX_DEV_HANDLE hDevice, uint32_t nDSIndex, GX
 		   The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXGetDevicePersistentIpAddress (GX_DEV_HANDLE hDevice,
-                                       char* pszIP,
-                                       size_t *pnIPLength,
-                                       char* pszSubNetMask,
-                                       size_t *pnSubNetMaskLength,
-                                       char* pszDefaultGateWay,
-                                       size_t *pnDefaultGateWayLength);
+GX_API GXGetDevicePersistentIpAddress(
+  GX_DEV_HANDLE hDevice,
+  char * pszIP,
+  size_t *pnIPLength,
+  char * pszSubNetMask,
+  size_t *pnSubNetMaskLength,
+  char * pszDefaultGateWay,
+  size_t *pnDefaultGateWayLength);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief     ÉèÖÃÉè±¸µÄÓÀ¾ÃIPÐÅÏ¢
-\attention ¸Ã½Ó¿ÚÖ»ÊÊÓÃÓÚÍøÂçÉè±¸
-\param     [in]     hDevice              Éè±¸¾ä±ú
-\param     [in]     pszIP                Éè±¸ÓÀ¾ÃIP×Ö·û´®£¬Ä©Î²¡¯\0¡¯
-\param     [in]     pszSubNetMask        Éè±¸ÓÀ¾Ã×ÓÍøÑÚÂë×Ö·û´®£¬Ä©Î²¡¯\0¡¯
-\param     [in]     pszDefaultGateWay    Éè±¸ÓÀ¾ÃÍø¹Ø×Ö·û´®£¬Ä©Î²¡¯\0¡¯
-\return    GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-           GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-		   GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-		   ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief     ï¿½ï¿½ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½IPï¿½ï¿½Ï¢
+\attention ï¿½Ã½Ó¿ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è±¸
+\param     [in]     hDevice              ï¿½è±¸ï¿½ï¿½ï¿½
+\param     [in]     pszIP                ï¿½è±¸ï¿½ï¿½ï¿½ï¿½IPï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Ä©Î²ï¿½ï¿½\0ï¿½ï¿½
+\param     [in]     pszSubNetMask        ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Ä©Î²ï¿½ï¿½\0ï¿½ï¿½
+\param     [in]     pszDefaultGateWay    ï¿½è±¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Ä©Î²ï¿½ï¿½\0ï¿½ï¿½
+\return    GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+           GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+		   GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+		   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief     Set the permanent IP information of the device.
 \attention This interface applies only to network devices
 \param     [in]     hDevice              The handle of the device.
-\param     [in]     pszIP                Device permanent IP string address, end with ¡¯\0¡¯.
-\param     [in]     pszSubNetMask        Device persistent subnet mask string address, end with ¡¯\0¡¯.
-\param     [in]     pszDefaultGateWay    Device permanent gateway string address, end with ¡¯\0¡¯.
+\param     [in]     pszIP                Device permanent IP string address, end with ï¿½ï¿½\0ï¿½ï¿½.
+\param     [in]     pszSubNetMask        Device persistent subnet mask string address, end with ï¿½ï¿½\0ï¿½ï¿½.
+\param     [in]     pszDefaultGateWay    Device permanent gateway string address, end with ï¿½ï¿½\0ï¿½ï¿½.
 \return    GX_STATUS_SUCCESS             The operation is successful and no error occurs.
 		   GX_STATUS_NOT_INIT_API        The GXInitLib initialization library is not called.
 		   GX_STATUS_INVALID_HANDLE      The illegal handle that the user introduces, or reclose the device.
 		   The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXSetDevicePersistentIpAddress (GX_DEV_HANDLE  hDevice,
-									   const char* pszIP,
-									   const char* pszSubNetMask,
-									   const char* pszDefaultGateWay);
+GX_API GXSetDevicePersistentIpAddress(
+  GX_DEV_HANDLE  hDevice,
+  const char * pszIP,
+  const char * pszSubNetMask,
+  const char * pszDefaultGateWay);
 
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÉèÖÃÔ¶¶ËÉè±¸¾²Ì¬£¨ÓÀ¾Ã£©IPµØÖ·
-\param		[in]   pszDevcieMacAddress  Éè±¸MACµØÖ·
-\param		[in]   ui32IpConfigFlag     ipÅäÖÃ·½Ê½£¨¾²Ì¬IP¡¢DHCP¡¢LLA¡¢Ä¬ÈÏ·½Ê½£©
-\param		[in]   pszIPAddress         Éè±¸IPµØÖ·
-\param		[in]   pszSubnetMask        ×ÓÍøÑÚÂë
-\param		[in]   pszDefaultGateway    Íø¹Ø
-\param		[in]   pszUserID            ÓÃ»§×Ô¶¨ÒåÃû³Æ
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER   ÎÞÐ§²ÎÊý
-			GX_STATUS_NOT_FOUND_DEVICE    Ã»ÓÐÕÒµ½Éè±¸
-			GX_STATUS_ERROR               ²Ù×÷Ê§°Ü
-			GX_STATUS_INVALID_ACCESS      ¾Ü¾ø·ÃÎÊ
-			GX_STATUS_TIMEOUT             ²Ù×÷³¬Ê±
-			GC_ERR_IO                     IOÍ¨Ñ¶´íÎó
-			GC_ERR_INVALID_ID             IDÎÞ·¨Óë×ÊÔ´½¨Á¢Á¬½Ó
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½è±¸ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½IPï¿½ï¿½Ö·
+\param		[in]   pszDevcieMacAddress  ï¿½è±¸MACï¿½ï¿½Ö·
+\param		[in]   ui32IpConfigFlag     ipï¿½ï¿½ï¿½Ã·ï¿½Ê½ï¿½ï¿½ï¿½ï¿½Ì¬IPï¿½ï¿½DHCPï¿½ï¿½LLAï¿½ï¿½Ä¬ï¿½Ï·ï¿½Ê½ï¿½ï¿½
+\param		[in]   pszIPAddress         ï¿½è±¸IPï¿½ï¿½Ö·
+\param		[in]   pszSubnetMask        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]   pszDefaultGateway    ï¿½ï¿½ï¿½ï¿½
+\param		[in]   pszUserID            ï¿½Ã»ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER   ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_FOUND_DEVICE    Ã»ï¿½ï¿½ï¿½Òµï¿½ï¿½è±¸
+			GX_STATUS_ERROR               ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½
+			GX_STATUS_INVALID_ACCESS      ï¿½Ü¾ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_TIMEOUT             ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±
+			GC_ERR_IO                     IOÍ¨Ñ¶ï¿½ï¿½ï¿½ï¿½
+			GC_ERR_INVALID_ID             IDï¿½Þ·ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 \English:
 \brief      Configure the static IP address of the camera.
@@ -728,30 +732,31 @@ GX_API GXSetDevicePersistentIpAddress (GX_DEV_HANDLE  hDevice,
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXGigEIpConfiguration(const char* pszDeviceMacAddress,
-							 GX_IP_CONFIGURE_MODE emIpConfigMode,
-							 const char* pszIpAddress,
-							 const char* pszSubnetMask,
-							 const char* pszDefaultGateway,
-							 const char* pszUserID);
+GX_API GXGigEIpConfiguration(
+  const char * pszDeviceMacAddress,
+  GX_IP_CONFIGURE_MODE emIpConfigMode,
+  const char * pszIpAddress,
+  const char * pszSubnetMask,
+  const char * pszDefaultGateway,
+  const char * pszUserID);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
+\Chineseï¿½ï¿½
 \brief      ForceIP
-\param		[in]   pszDevcieMacAddress  Éè±¸MACµØÖ·
-\param		[in]   pszIPAddress         Éè±¸IPµØÖ·
-\param		[in]   pszSubnetMask        ×ÓÍøÑÚÂë
-\param		[in]   pszDefaultGateway    Íø¹Ø
-\return		GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÎÞÐ§²ÎÊý
-			GX_STATUS_NOT_FOUND_DEVICE		Ã»ÓÐÕÒµ½Éè±¸
-			GX_STATUS_ERROR					²Ù×÷Ê§°Ü
-			GX_STATUS_INVALID_ACCESS		¾Ü¾ø·ÃÎÊ
-			GX_STATUS_TIMEOUT				²Ù×÷³¬Ê±
-			GC_ERR_IO						IOÍ¨Ñ¶´íÎó
-			GC_ERR_INVALID_ID				IDÎÞ·¨Óë×ÊÔ´½¨Á¢Á¬½Ó
+\param		[in]   pszDevcieMacAddress  ï¿½è±¸MACï¿½ï¿½Ö·
+\param		[in]   pszIPAddress         ï¿½è±¸IPï¿½ï¿½Ö·
+\param		[in]   pszSubnetMask        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]   pszDefaultGateway    ï¿½ï¿½ï¿½ï¿½
+\return		GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_FOUND_DEVICE		Ã»ï¿½ï¿½ï¿½Òµï¿½ï¿½è±¸
+			GX_STATUS_ERROR					ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½
+			GX_STATUS_INVALID_ACCESS		ï¿½Ü¾ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_TIMEOUT				ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±
+			GC_ERR_IO						IOÍ¨Ñ¶ï¿½ï¿½ï¿½ï¿½
+			GC_ERR_INVALID_ID				IDï¿½Þ·ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 \English:
 \brief      Execute the Force IP.
@@ -770,26 +775,27 @@ GX_API GXGigEIpConfiguration(const char* pszDeviceMacAddress,
 			GC_ERR_INVALID_ID               Invalid ID.
 */
 // ---------------------------------------------------------------------------
-GX_API GXGigEForceIp(const char* pszDeviceMacAddress,
-							 const char* pszIpAddress,
-							 const char* pszSubnetMask,
-							 const char* pszDefaultGateway);
+GX_API GXGigEForceIp(
+  const char * pszDeviceMacAddress,
+  const char * pszIpAddress,
+  const char * pszSubnetMask,
+  const char * pszDefaultGateway);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÖØÁ¬/¸´Î»
-\param		[in]   pszDevcieMacAddress  Éè±¸MACµØÖ·
-\param		[in]   ui32FeatureInfo      ÖØÖÃÉè±¸Ä£Ê½
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÎÞÐ§²ÎÊý
-			GX_STATUS_NOT_FOUND_DEVICE		Ã»ÓÐÕÒµ½Éè±¸
-			GX_STATUS_ERROR					²Ù×÷Ê§°Ü
-			GX_STATUS_INVALID_ACCESS		¾Ü¾ø·ÃÎÊ
-			GX_STATUS_TIMEOUT				²Ù×÷³¬Ê±
-			GC_ERR_IO						IOÍ¨Ñ¶´íÎó
-			GC_ERR_INVALID_ID				IDÎÞ·¨Óë×ÊÔ´½¨Á¢Á¬½Ó
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½Î»
+\param		[in]   pszDevcieMacAddress  ï¿½è±¸MACï¿½ï¿½Ö·
+\param		[in]   ui32FeatureInfo      ï¿½ï¿½ï¿½ï¿½ï¿½è±¸Ä£Ê½
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_FOUND_DEVICE		Ã»ï¿½ï¿½ï¿½Òµï¿½ï¿½è±¸
+			GX_STATUS_ERROR					ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½
+			GX_STATUS_INVALID_ACCESS		ï¿½Ü¾ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_TIMEOUT				ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±
+			GC_ERR_IO						IOÍ¨Ñ¶ï¿½ï¿½ï¿½ï¿½
+			GC_ERR_INVALID_ID				IDï¿½Þ·ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 \English:
 \brief      Reconnection/Reset
@@ -806,18 +812,18 @@ GX_API GXGigEForceIp(const char* pszDeviceMacAddress,
 			GC_ERR_INVALID_ID               Invalid ID.
 */
 // ---------------------------------------------------------------------------
-GX_API GXGigEResetDevice(const char* pszDeviceMacAddress, GX_RESET_DEVICE_MODE ui32FeatureInfo);
+GX_API GXGigEResetDevice(const char * pszDeviceMacAddress, GX_RESET_DEVICE_MODE ui32FeatureInfo);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡Éè±¸Á÷PayloadSize
-\param		[in]hDStream			   Éè±¸Á÷handle
-\param		[in|out]punPacketSize      PayLoadSizeÖ¸Õë
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-            GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-            GX_STATUS_INVALID_PARAMETER   ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-            ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡ï¿½è±¸ï¿½ï¿½PayloadSize
+\param		[in]hDStream			   ï¿½è±¸ï¿½ï¿½handle
+\param		[in|out]punPacketSize      PayLoadSizeÖ¸ï¿½ï¿½
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_INVALID_PARAMETER   ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Get device stream PayloadSize.
@@ -829,19 +835,19 @@ GX_API GXGigEResetDevice(const char* pszDeviceMacAddress, GX_RESET_DEVICE_MODE u
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXGetPayLoadSize(GX_DS_HANDLE hDStream, uint32_t* punPacketSize);
+GX_API GXGetPayLoadSize(GX_DS_HANDLE hDStream, uint32_t * punPacketSize);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ±£´æÓÃ»§²ÎÊý×é
-\param		[in]hPort               Handle¾ä±ú
-\param		[in]strFileName         ±£´æÓÃ»§²ÎÊý×éµÄÎÄ¼þÂ·¾¶
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]hPort               Handleï¿½ï¿½ï¿½
+\param		[in]strFileName         ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Â·ï¿½ï¿½
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Save the user parameter group
@@ -854,20 +860,20 @@ GX_API GXGetPayLoadSize(GX_DS_HANDLE hDStream, uint32_t* punPacketSize);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXFeatureSave(GX_PORT_HANDLE hPort, const char* strFileName);
+GX_API GXFeatureSave(GX_PORT_HANDLE hPort, const char * strFileName);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ¼ÓÔØÓÃ»§²ÎÊý×é
-\param		[in]hPort               Handle¾ä±ú
-\param		[in]strFileName         ¼ÓÔØÓÃ»§²ÎÊý×éµÄÎÄ¼þÂ·¾¶
-\param		[in]bVerify             Èç¹û´ËÖµÎªtrue£¬ËùÓÐµ¼Èë½øÈ¥µÄÖµ½«»á±»¶Á³ö½øÐÐÐ£ÑéÊÇ·ñÒ»ÖÂ
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]hPort               Handleï¿½ï¿½ï¿½
+\param		[in]strFileName         ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Â·ï¿½ï¿½
+\param		[in]bVerify             ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÎªtrueï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½Öµï¿½ï¿½ï¿½á±»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½Ç·ï¿½Ò»ï¿½ï¿½
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Load the user parameter group
@@ -881,19 +887,19 @@ GX_API GXFeatureSave(GX_PORT_HANDLE hPort, const char* strFileName);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXFeatureLoad(GX_PORT_HANDLE hPort, const char* strFileName, bool bVerify);
+GX_API GXFeatureLoad(GX_PORT_HANDLE hPort, const char * strFileName, bool bVerify);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ±£´æÓÃ»§²ÎÊý×é
-\param		[in]hPort               Handle¾ä±ú
-\param		[in]strFileName         ±£´æÓÃ»§²ÎÊý×éµÄÎÄ¼þÂ·¾¶£¨¿í×Ö½Ú£©
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]hPort               Handleï¿½ï¿½ï¿½
+\param		[in]strFileName         ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½Ú£ï¿½
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Save the user parameter group
@@ -906,20 +912,20 @@ GX_API GXFeatureLoad(GX_PORT_HANDLE hPort, const char* strFileName, bool bVerify
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXFeatureSaveW(GX_PORT_HANDLE hPort, const wchar_t* strFileName);
+GX_API GXFeatureSaveW(GX_PORT_HANDLE hPort, const wchar_t * strFileName);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ¼ÓÔØÓÃ»§²ÎÊý×é
-\param		[in]hPort               Handle¾ä±ú
-\param		[in]strFileName         ¼ÓÔØÓÃ»§²ÎÊý×éµÄÎÄ¼þÂ·¾¶£¨¿í×Ö½Ú£©
-\param		[in]bVerify             Èç¹û´ËÖµÎªtrue£¬ËùÓÐµ¼Èë½øÈ¥µÄÖµ½«»á±»¶Á³ö½øÐÐÐ£ÑéÊÇ·ñÒ»ÖÂ
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]hPort               Handleï¿½ï¿½ï¿½
+\param		[in]strFileName         ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½Ú£ï¿½
+\param		[in]bVerify             ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÎªtrueï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½Öµï¿½ï¿½ï¿½á±»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½Ç·ï¿½Ò»ï¿½ï¿½
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Load the user parameter group
@@ -933,20 +939,20 @@ GX_API GXFeatureSaveW(GX_PORT_HANDLE hPort, const wchar_t* strFileName);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXFeatureLoadW(GX_PORT_HANDLE hPort, const wchar_t* strFileName, bool bVerify);
+GX_API GXFeatureLoadW(GX_PORT_HANDLE hPort, const wchar_t * strFileName, bool bVerify);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡½ÚµãµÄ¶ÁÐ´ÊôÐÔ
-\param		[in]hPort					Handle¾ä±ú
-\param		[in]strName					½ÚµãÃû³Æ
-\param		[in|out]pemAccessMode      ½Úµã¶ÁÐ´ÊôÐÔ
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡ï¿½Úµï¿½Ä¶ï¿½Ð´ï¿½ï¿½ï¿½ï¿½
+\param		[in]hPort					Handleï¿½ï¿½ï¿½
+\param		[in]strName					ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in|out]pemAccessMode      ï¿½Úµï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Get the read and write attributes of the node.
@@ -960,20 +966,22 @@ GX_API GXFeatureLoadW(GX_PORT_HANDLE hPort, const wchar_t* strFileName, bool bVe
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXGetNodeAccessMode(GX_PORT_HANDLE hPort, const char* strName, GX_NODE_ACCESS_MODE* pemAccessMode);
+GX_API GXGetNodeAccessMode(
+  GX_PORT_HANDLE hPort, const char * strName,
+  GX_NODE_ACCESS_MODE * pemAccessMode);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡ÕûÐÍ½ÚµãÐÅÏ¢
-\param		[in]       hPort              Handle¾ä±ú
-\param		[in]       strName            ½ÚµãÃû³Æ
-\param		[in|out]   pstIntValue        ÕûÐÍ½ÚµãÐÅÏ¢
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡ï¿½ï¿½ï¿½Í½Úµï¿½ï¿½ï¿½Ï¢
+\param		[in]       hPort              Handleï¿½ï¿½ï¿½
+\param		[in]       strName            ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in|out]   pstIntValue        ï¿½ï¿½ï¿½Í½Úµï¿½ï¿½ï¿½Ï¢
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Get int value information.
@@ -987,20 +995,20 @@ GX_API GXGetNodeAccessMode(GX_PORT_HANDLE hPort, const char* strName, GX_NODE_AC
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXGetIntValue(GX_PORT_HANDLE hPort, const char* strName, GX_INT_VALUE* pstIntValue);
+GX_API GXGetIntValue(GX_PORT_HANDLE hPort, const char * strName, GX_INT_VALUE * pstIntValue);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÉèÖÃÕûÐÍ½ÚµãÖµ
-\param		[in]hPort              Handle¾ä±ú
-\param		[in]strName            ½ÚµãÃû³Æ
-\param		[in|out]i64Value       ÕûÐÍ½ÚµãÖµ
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½Öµ
+\param		[in]hPort              Handleï¿½ï¿½ï¿½
+\param		[in]strName            ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in|out]i64Value       ï¿½ï¿½ï¿½Í½Úµï¿½Öµ
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Set int value information.
@@ -1014,20 +1022,20 @@ GX_API GXGetIntValue(GX_PORT_HANDLE hPort, const char* strName, GX_INT_VALUE* ps
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXSetIntValue(GX_PORT_HANDLE hPort, const char* strName, int64_t i64Value);
+GX_API GXSetIntValue(GX_PORT_HANDLE hPort, const char * strName, int64_t i64Value);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡Ã¶¾ÙÐÍ½ÚµãÐÅÏ¢
-\param		[in]hPort				Handle¾ä±ú
-\param		[in]strName				½ÚµãÃû³Æ
-\param		[in|out]pstEnumValue    Ã¶¾ÙÀàÐÍ½ÚµãÐÅÏ¢£¨ÊýÖµÐÍÖµ£©
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡Ã¶ï¿½ï¿½ï¿½Í½Úµï¿½ï¿½ï¿½Ï¢
+\param		[in]hPort				Handleï¿½ï¿½ï¿½
+\param		[in]strName				ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in|out]pstEnumValue    Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Öµï¿½ï¿½
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      To get the current enumeration value
@@ -1041,20 +1049,20 @@ GX_API GXSetIntValue(GX_PORT_HANDLE hPort, const char* strName, int64_t i64Value
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXGetEnumValue(GX_PORT_HANDLE hPort, const char* strName, GX_ENUM_VALUE* pstEnumValue);
+GX_API GXGetEnumValue(GX_PORT_HANDLE hPort, const char * strName, GX_ENUM_VALUE * pstEnumValue);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÉèÖÃÃ¶¾ÙÐÍ½ÚµãÖµ
-\param		[in]hPort           Handle¾ä±ú
-\param		[in]strName         ½ÚµãÃû³Æ
-\param		[in]i64Value        Ã¶¾ÙÀàÐÍ½ÚµãÖµ
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½Í½Úµï¿½Öµ
+\param		[in]hPort           Handleï¿½ï¿½ï¿½
+\param		[in]strName         ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]i64Value        Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½Öµ
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Sets the value of an enumerated node
@@ -1068,20 +1076,20 @@ GX_API GXGetEnumValue(GX_PORT_HANDLE hPort, const char* strName, GX_ENUM_VALUE* 
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXSetEnumValue(GX_PORT_HANDLE hPort, const char* strName, int64_t i64Value);
+GX_API GXSetEnumValue(GX_PORT_HANDLE hPort, const char * strName, int64_t i64Value);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÉèÖÃÃ¶¾ÙÐÍ½ÚµãÖµ
-\param		[in]hPort           Handle¾ä±ú
-\param		[in]strName         ½ÚµãÃû³Æ
-\param		[in]strValue        Ã¶¾ÙÀàÐÍ½ÚµãÖµ£¨×Ö·û´®ÐÍÖµ£©
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½Í½Úµï¿½Öµ
+\param		[in]hPort           Handleï¿½ï¿½ï¿½
+\param		[in]strName         ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]strValue        Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½Öµï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Sets the value of an enumerated node
@@ -1095,20 +1103,20 @@ GX_API GXSetEnumValue(GX_PORT_HANDLE hPort, const char* strName, int64_t i64Valu
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXSetEnumValueByString(GX_PORT_HANDLE hPort, const char* strName, const char* strValue);
+GX_API GXSetEnumValueByString(GX_PORT_HANDLE hPort, const char * strName, const char * strValue);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡¸¡µãÐÍ½ÚµãÐÅÏ¢
-\param		[in]hPort				Handle¾ä±ú
-\param		[in]strName				½ÚµãÃû³Æ
-\param		[in|out]pstFloatValue   ¸¡µãÀàÐÍ½ÚµãÐÅÏ¢
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½ï¿½ï¿½Ï¢
+\param		[in]hPort				Handleï¿½ï¿½ï¿½
+\param		[in]strName				ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in|out]pstFloatValue   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½ï¿½ï¿½Ï¢
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Get the value of float type.
@@ -1122,20 +1130,20 @@ GX_API GXSetEnumValueByString(GX_PORT_HANDLE hPort, const char* strName, const c
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXGetFloatValue(GX_PORT_HANDLE hPort, const char* strName, GX_FLOAT_VALUE* pstFloatValue);
+GX_API GXGetFloatValue(GX_PORT_HANDLE hPort, const char * strName, GX_FLOAT_VALUE * pstFloatValue);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÉèÖÃ¸¡µãÐÍ½ÚµãÖµ
-\param		[in]hPort           Handle¾ä±ú
-\param		[in]strName         ½ÚµãÃû³Æ
-\param		[in]dValue          ¸¡µãÀàÐÍ½ÚµãÖµ
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½Öµ
+\param		[in]hPort           Handleï¿½ï¿½ï¿½
+\param		[in]strName         ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]dValue          ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½Öµ
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Set the value of float type.
@@ -1149,20 +1157,20 @@ GX_API GXGetFloatValue(GX_PORT_HANDLE hPort, const char* strName, GX_FLOAT_VALUE
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXSetFloatValue(GX_PORT_HANDLE hPort, const char* strName, double dValue);
+GX_API GXSetFloatValue(GX_PORT_HANDLE hPort, const char * strName, double dValue);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡²¼¶ûÐÍ½ÚµãÐÅÏ¢
-\param		[in]hPort              Handle¾ä±ú
-\param		[in]strName            ½ÚµãÃû³Æ
-\param		[in|out]pbValue        ²¼¶ûÀàÐÍ½ÚµãÐÅÏ¢
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½ï¿½ï¿½Ï¢
+\param		[in]hPort              Handleï¿½ï¿½ï¿½
+\param		[in]strName            ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in|out]pbValue        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½ï¿½ï¿½Ï¢
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Get the value of bool type.
@@ -1176,20 +1184,20 @@ GX_API GXSetFloatValue(GX_PORT_HANDLE hPort, const char* strName, double dValue)
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXGetBoolValue(GX_PORT_HANDLE hPort, const char* strName, bool* pbValue);
+GX_API GXGetBoolValue(GX_PORT_HANDLE hPort, const char * strName, bool * pbValue);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÉèÖÃ²¼¶ûÐÍ½ÚµãÖµ
-\param		[in]hPort           Handle¾ä±ú
-\param		[in]strName         ½ÚµãÃû³Æ
-\param		[in]bValue          ²¼¶ûÀàÐÍ½ÚµãÖµ
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½Öµ
+\param		[in]hPort           Handleï¿½ï¿½ï¿½
+\param		[in]strName         ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]bValue          ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½Öµ
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 
 \English:
@@ -1204,20 +1212,20 @@ GX_API GXGetBoolValue(GX_PORT_HANDLE hPort, const char* strName, bool* pbValue);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXSetBoolValue(GX_PORT_HANDLE hPort, const char* strName, bool bValue);
+GX_API GXSetBoolValue(GX_PORT_HANDLE hPort, const char * strName, bool bValue);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡×Ö·û´®ÐÍ½ÚµãÐÅÏ¢
-\param		[in]hPort					Handle¾ä±ú
-\param		[in]strName					½ÚµãÃû³Æ
-\param		[in|out]pstStringValue		×Ö·û´®ÀàÐÍ½ÚµãÊý¾Ý
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½ï¿½ï¿½Ï¢
+\param		[in]hPort					Handleï¿½ï¿½ï¿½
+\param		[in]strName					ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in|out]pstStringValue		ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Get the content of the string type.
@@ -1231,20 +1239,22 @@ GX_API GXSetBoolValue(GX_PORT_HANDLE hPort, const char* strName, bool bValue);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXGetStringValue(GX_PORT_HANDLE hPort, const char* strName, GX_STRING_VALUE* pstStringValue);
+GX_API GXGetStringValue(
+  GX_PORT_HANDLE hPort, const char * strName,
+  GX_STRING_VALUE * pstStringValue);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÉèÖÃ×Ö·û´®ÀàÐÍ½ÚµãÖµ
-\param		[in]hPort				Handle¾ä±ú
-\param		[in]strName				½ÚµãÃû³Æ
-\param		[in]strValue			×Ö·û´®ÀàÐÍ½ÚµãÖµ
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½Öµ
+\param		[in]hPort				Handleï¿½ï¿½ï¿½
+\param		[in]strName				ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]strValue			ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½Öµ
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Set a string type node value
@@ -1258,21 +1268,21 @@ GX_API GXGetStringValue(GX_PORT_HANDLE hPort, const char* strName, GX_STRING_VAL
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXSetStringValue(GX_PORT_HANDLE hPort, const char* strName, const char* strValue);
+GX_API GXSetStringValue(GX_PORT_HANDLE hPort, const char * strName, const char * strValue);
 
-//string ³¤¶È
+//string ï¿½ï¿½ï¿½ï¿½
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ·¢ËÍÃüÁî
-\param		[in]hPort				Handle¾ä±ú
-\param		[in]strName				½ÚµãÃû³Æ
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]hPort				Handleï¿½ï¿½ï¿½
+\param		[in]strName				ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Send the command.
@@ -1285,20 +1295,20 @@ GX_API GXSetStringValue(GX_PORT_HANDLE hPort, const char* strName, const char* s
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXSetCommandValue(GX_PORT_HANDLE hPort, const char* strName);
+GX_API GXSetCommandValue(GX_PORT_HANDLE hPort, const char * strName);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡¼Ä´æÆ÷ÐÍ½ÚµãÊý¾Ý³¤¶È
-\param		[in]hPort              Handle¾ä±ú
-\param		[in]strName            ½ÚµãÃû³Æ
-\param		[in|out]pnSize         ±£´æÊý¾Ý³¤¶È
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½ï¿½ï¿½ï¿½Ý³ï¿½ï¿½ï¿½
+\param		[in]hPort              Handleï¿½ï¿½ï¿½
+\param		[in]strName            ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in|out]pnSize         ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý³ï¿½ï¿½ï¿½
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Gets the data length of a register node
@@ -1312,21 +1322,21 @@ GX_API GXSetCommandValue(GX_PORT_HANDLE hPort, const char* strName);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXGetRegisterLength(GX_PORT_HANDLE hPort, const char* strName, size_t* pnSize);
+GX_API GXGetRegisterLength(GX_PORT_HANDLE hPort, const char * strName, size_t * pnSize);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      »ñÈ¡¼Ä´æÆ÷ÐÍ½ÚµãÖµ
-\param		[in]hPort              Handle¾ä±ú
-\param		[in]strName            ½ÚµãÃû³Æ
-\param		[in|out]pBuffer        ¼Ä´æÆ÷ÖµÊý¾Ý
-\param		[in|out]pnSize         Êý¾Ý³¤¶È
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½È¡ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Í½Úµï¿½Öµ
+\param		[in]hPort              Handleï¿½ï¿½ï¿½
+\param		[in]strName            ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in|out]pBuffer        ï¿½Ä´ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½
+\param		[in|out]pnSize         ï¿½ï¿½ï¿½Ý³ï¿½ï¿½ï¿½
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Get register type node values.
@@ -1341,21 +1351,23 @@ GX_API GXGetRegisterLength(GX_PORT_HANDLE hPort, const char* strName, size_t* pn
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXGetRegisterValue(GX_PORT_HANDLE hPort, const char* strName, uint8_t* pBuffer, size_t* pnSize);
+GX_API GXGetRegisterValue(
+  GX_PORT_HANDLE hPort, const char * strName, uint8_t * pBuffer,
+  size_t * pnSize);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÉèÖÃ¼Ä´æÆ÷Öµ
-\param		[in]hPort           Handle¾ä±ú
-\param		[in]strName         ½ÚµãÃû³Æ
-\param		[in]pBuffer         ¼Ä´æÆ÷Êý¾Ý
-\param		[in]nSize           ¼Ä´æÆ÷Êý¾Ý³¤¶È
-\return     GX_STATUS_SUCCESS				²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API			Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_PARAMETER		ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_HANDLE		ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú£¬»òÕß¹Ø±ÕÒÑ¾­±»¹Ø±ÕµÄÉè±¸
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½Ã¼Ä´ï¿½ï¿½ï¿½Öµ
+\param		[in]hPort           Handleï¿½ï¿½ï¿½
+\param		[in]strName         ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]pBuffer         ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]nSize           ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý³ï¿½ï¿½ï¿½
+\return     GX_STATUS_SUCCESS				ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API			Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_HANDLE		ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¹Ø±ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ø±Õµï¿½ï¿½è±¸
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Set register value
@@ -1370,21 +1382,23 @@ GX_API GXGetRegisterValue(GX_PORT_HANDLE hPort, const char* strName, uint8_t* pB
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXSetRegisterValue(GX_PORT_HANDLE hPort, const char* strName, uint8_t* pBuffer, size_t nSize);
+GX_API GXSetRegisterValue(
+  GX_PORT_HANDLE hPort, const char * strName, uint8_t * pBuffer,
+  size_t nSize);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ¶ÁÓÃ»§Ö¸¶¨¼Ä´æÆ÷µÄÖµ
-\param		[in]hPort           ¾ä±ú
-\param		[in]ui64Address     ¼Ä´æÆ÷µØÖ·
-\param		[out]pBuffer        ·µ»Ø¼Ä´æÆ÷µÄÖµ£¬²»ÄÜÎªNULL
-\param		[in, out]piSize     [in]ÓÃ»§ÉêÇëµÄBuffer´óÐ¡
-								[out]³É¹¦¶ÁÈ¡¼Ä´æÆ÷µÄÖµºó£¬·µ»ØÊµ¼Ê´óÐ¡
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			ÉÏÃæÃ»ÓÐº­¸Çµ½µÄ£¬²»³£¼ûµÄ´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½Ã»ï¿½Ö¸ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+\param		[in]hPort           ï¿½ï¿½ï¿½
+\param		[in]ui64Address     ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Ö·
+\param		[out]pBuffer        ï¿½ï¿½ï¿½Ø¼Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªNULL
+\param		[in, out]piSize     [in]ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Bufferï¿½ï¿½Ð¡
+								[out]ï¿½É¹ï¿½ï¿½ï¿½È¡ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ó£¬·ï¿½ï¿½ï¿½Êµï¿½Ê´ï¿½Ð¡
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ðºï¿½ï¿½Çµï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Reads the value of a user-specified register
@@ -1399,21 +1413,21 @@ GX_API GXSetRegisterValue(GX_PORT_HANDLE hPort, const char* strName, uint8_t* pB
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXReadPort(GX_PORT_HANDLE hPort, uint64_t ui64Address, void* pBuffer, size_t* piSize);
+GX_API GXReadPort(GX_PORT_HANDLE hPort, uint64_t ui64Address, void * pBuffer, size_t * piSize);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÏòÓÃ»§Ö¸¶¨µÄ¼Ä´æÆ÷ÖÐÐ´ÈëÓÃ»§¸ø¶¨µÄÊý¾Ý
-\param		[in]hPort           ¾ä±ú
-\param		[in]ui64Address     ¼Ä´æÆ÷µØÖ·
-\param		[in]pBuffer         ¼Ä´æÆ÷µÄÖµ£¬²»ÄÜÎªNULL
-\param		[in, out]piSize     [in]ÓÃ»§ÒªÐ´ÈëµÄBuffer³¤¶È
-								[out]·µ»ØÊµ¼ÊÐ´Èë¼Ä´æÆ÷µÄ³¤¶È
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			ÉÏÃæÃ»ÓÐº­¸Çµ½µÄ£¬²»³£¼ûµÄ´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½Ã»ï¿½Ö¸ï¿½ï¿½ï¿½Ä¼Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]hPort           ï¿½ï¿½ï¿½
+\param		[in]ui64Address     ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Ö·
+\param		[in]pBuffer         ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªNULL
+\param		[in, out]piSize     [in]ï¿½Ã»ï¿½ÒªÐ´ï¿½ï¿½ï¿½Bufferï¿½ï¿½ï¿½ï¿½
+								[out]ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½Ð´ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ðºï¿½ï¿½Çµï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Writes the data given by the user to a register specified by the user
@@ -1428,21 +1442,23 @@ GX_API GXReadPort(GX_PORT_HANDLE hPort, uint64_t ui64Address, void* pBuffer, siz
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXWritePort(GX_PORT_HANDLE hPort, uint64_t ui64Address, const void* pBuffer, size_t* piSize);
+GX_API GXWritePort(
+  GX_PORT_HANDLE hPort, uint64_t ui64Address, const void * pBuffer,
+  size_t * piSize);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÅúÁ¿¶ÁÓÃ»§Ö¸¶¨¼Ä´æÆ÷µÄÖµ£¨½öÏÞÃüÁîÖµÎª4×Ö½Ú³¤¶ÈµÄ¼Ä´æÆ÷,ÆäÓàÀàÐÍ²»±£Ö¤Êý¾ÝÓÐÐ§ÐÔ£©
-\param		[in]hPort           ¾ä±ú
-\param		[in|out]pstEntries  [in]ÅúÁ¿¶ÁÈ¡¼Ä´æÆ÷µÄµØÖ·¼°Öµ
-								[out]¶ÁÈ¡µ½¶ÔÓ¦¼Ä´æÆ÷µÄÊý¾Ý
-\param		[in, out]piSize     [in]¶ÁÈ¡Éè±¸¼Ä´æÆ÷µÄ¸öÊý
-								[out]³É¹¦¶ÁÈ¡¼Ä´æÆ÷µÄ¸öÊý
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			ÉÏÃæÃ»ÓÐº­¸Çµ½µÄ£¬²»³£¼ûµÄ´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ö¸ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÎª4ï¿½Ö½Ú³ï¿½ï¿½ÈµÄ¼Ä´ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í²ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½Ô£ï¿½
+\param		[in]hPort           ï¿½ï¿½ï¿½
+\param		[in|out]pstEntries  [in]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Äµï¿½Ö·ï¿½ï¿½Öµ
+								[out]ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in, out]piSize     [in]ï¿½ï¿½È¡ï¿½è±¸ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½
+								[out]ï¿½É¹ï¿½ï¿½ï¿½È¡ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ðºï¿½ï¿½Çµï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Batch read the value of the user specified register (only the command value is 4 bytes long register, other types do not guarantee data validity)
@@ -1457,23 +1473,25 @@ GX_API GXWritePort(GX_PORT_HANDLE hPort, uint64_t ui64Address, const void* pBuff
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXReadPortStacked(GX_PORT_HANDLE hPort, GX_REGISTER_STACK_ENTRY* pstEntries, size_t *piSize);
+GX_API GXReadPortStacked(
+  GX_PORT_HANDLE hPort, GX_REGISTER_STACK_ENTRY * pstEntries,
+  size_t *piSize);
 
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÅúÁ¿ÏòÓÃ»§Ö¸¶¨µÄ¼Ä´æÆ÷ÖÐÐ´ÈëÓÃ»§¸ø¶¨µÄÊý¾Ý£¨½öÏÞÃüÁîÖµÎª4×Ö½Ú³¤¶ÈµÄ¼Ä´æÆ÷£©
-            µ÷ÓÃµ±Ç°½Ó¿Úºó£¬Ê¹ÓÃGXGetEnum¡¢GXGetInt¡¢GXGetBoolµÈ½Ó¿Ú»ñÈ¡µ½µÄ½ÚµãÖµÎªÐÞ¸ÄÇ°Öµ
-            ¿ÉÊ¹ÓÃGXReadPort½Ó¿Ú»ñÈ¡×îÐÂµÄ¼Ä´æÆ÷Öµ
-\param		[in]hPort           ¾ä±ú
-\param		[in]pstEntries      [in]ÅúÁ¿Ð´¼Ä´æÆ÷µÄµØÖ·¼°Öµ
-\param		[in|out]piSize      [in]ÉèÖÃÉè±¸¼Ä´æÆ÷µÄ¸öÊý
-								[out]³É¹¦Ð´¼Ä´æÆ÷µÄ¸öÊý
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			ÉÏÃæÃ»ÓÐº­¸Çµ½µÄ£¬²»³£¼ûµÄ´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ö¸ï¿½ï¿½ï¿½Ä¼Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÎª4ï¿½Ö½Ú³ï¿½ï¿½ÈµÄ¼Ä´ï¿½ï¿½ï¿½ï¿½ï¿½
+            ï¿½ï¿½ï¿½Ãµï¿½Ç°ï¿½Ó¿Úºï¿½Ê¹ï¿½ï¿½GXGetEnumï¿½ï¿½GXGetIntï¿½ï¿½GXGetBoolï¿½È½Ó¿Ú»ï¿½È¡ï¿½ï¿½ï¿½Ä½Úµï¿½ÖµÎªï¿½Þ¸ï¿½Ç°Öµ
+            ï¿½ï¿½Ê¹ï¿½ï¿½GXReadPortï¿½Ó¿Ú»ï¿½È¡ï¿½ï¿½ï¿½ÂµÄ¼Ä´ï¿½ï¿½ï¿½Öµ
+\param		[in]hPort           ï¿½ï¿½ï¿½
+\param		[in]pstEntries      [in]ï¿½ï¿½ï¿½ï¿½Ð´ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Äµï¿½Ö·ï¿½ï¿½Öµ
+\param		[in|out]piSize      [in]ï¿½ï¿½ï¿½ï¿½ï¿½è±¸ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½
+								[out]ï¿½É¹ï¿½Ð´ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ðºï¿½ï¿½Çµï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Write user-specified data in batches to user-specified registers (only registers with 4-byte command values)
@@ -1489,21 +1507,23 @@ GX_API GXReadPortStacked(GX_PORT_HANDLE hPort, GX_REGISTER_STACK_ENTRY* pstEntri
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXWritePortStacked(GX_PORT_HANDLE hPort, const GX_REGISTER_STACK_ENTRY* pstEntries, size_t *piSize);
+GX_API GXWritePortStacked(
+  GX_PORT_HANDLE hPort, const GX_REGISTER_STACK_ENTRY * pstEntries,
+  size_t *piSize);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief       »ñÈ¡×îÓÅ°ü³¤Öµ
-\param		[in]hDevice				Éè±¸¾ä±ú
-\param		[out]punPacketSize		×îÓÅ°ü³¤Öµ
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_TIMEOUT             ²Ù×÷³¬Ê±
-			GC_ERR_IO                     IOÍ¨Ñ¶´íÎó
-			GX_STATUS_INVALID_PARAMETER   ÎÞÐ§²ÎÊý
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			GX_STATUS_NOT_IMPLEMENTED     µ±Ç°²»Ö§³ÖµÄ¹¦ÄÜ
-			ÉÏÃæÃ»ÓÐº­¸Çµ½µÄ£¬²»³£¼ûµÄ´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief       ï¿½ï¿½È¡ï¿½ï¿½ï¿½Å°ï¿½ï¿½ï¿½Öµ
+\param		[in]hDevice				ï¿½è±¸ï¿½ï¿½ï¿½
+\param		[out]punPacketSize		ï¿½ï¿½ï¿½Å°ï¿½ï¿½ï¿½Öµ
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_TIMEOUT             ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±
+			GC_ERR_IO                     IOÍ¨Ñ¶ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER   ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			GX_STATUS_NOT_IMPLEMENTED     ï¿½ï¿½Ç°ï¿½ï¿½Ö§ï¿½ÖµÄ¹ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ðºï¿½ï¿½Çµï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Gets the optimal packet length value
@@ -1518,19 +1538,19 @@ GX_API GXWritePortStacked(GX_PORT_HANDLE hPort, const GX_REGISTER_STACK_ENTRY* p
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API  GXGetOptimalPacketSize (GX_DEV_HANDLE hDevice, uint32_t* punPacketSize);
+GX_API  GXGetOptimalPacketSize(GX_DEV_HANDLE hDevice, uint32_t * punPacketSize);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÓÃ»§ÉèÖÃ²É¼¯buffer¸öÊý
-\param		[in]hDevice         Éè±¸¾ä±ú
-\param		[in]nBufferNum      ÓÃ»§ÉèÖÃµÄbuffer¸öÊý
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			GX_STATUS_INVALID_PARAMETER    ÊäÈë²ÎÊýÎÞÐ§
-			ÉÏÃæÃ»ÓÐº­¸Çµ½µÄ£¬²»³£¼ûµÄ´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ã²É¼ï¿½bufferï¿½ï¿½ï¿½ï¿½
+\param		[in]hDevice         ï¿½è±¸ï¿½ï¿½ï¿½
+\param		[in]nBufferNum      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ãµï¿½bufferï¿½ï¿½ï¿½ï¿½
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
+			ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ðºï¿½ï¿½Çµï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Set the number of the acquisition buffers.
@@ -1547,18 +1567,18 @@ GX_API GXSetAcqusitionBufferNumber(GX_DEV_HANDLE hDevice, uint64_t nBufferNum);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ×¢²á²É¼¯»Øµ÷º¯Êý
-\attention  ±ØÐëÔÚ·¢ËÍ¿ª²ÉÃüÁîÖ®Ç°×¢²á²É¼¯»Øµ÷º¯Êý
-\param		[in]hDevice			Éè±¸¾ä±ú
-\param		[in]pUserParam		ÓÃ»§Ë½ÓÐÊý¾Ý
-\param		[in]callBackFun		ÓÃ»§×¢²áµÄ»Øµ÷º¯Êý
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			GX_STATUS_INVALID_PARAMETER   ÓÃ»§´«ÈëÖ¸ÕëÎªNULL
-			GX_STATUS_INVALID_CALL        ·¢ËÍ¿ª²ÉÃüÁîºó£¬²»ÄÜ×¢²á²É¼¯»Øµ÷º¯Êý
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ×¢ï¿½ï¿½É¼ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+\attention  ï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®Ç°×¢ï¿½ï¿½É¼ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]hDevice			ï¿½è±¸ï¿½ï¿½ï¿½
+\param		[in]pUserParam		ï¿½Ã»ï¿½Ë½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]callBackFun		ï¿½Ã»ï¿½×¢ï¿½ï¿½Ä»Øµï¿½ï¿½ï¿½ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER   ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_INVALID_CALL        ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó£¬²ï¿½ï¿½ï¿½×¢ï¿½ï¿½É¼ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Register the capture callback function
@@ -1574,19 +1594,21 @@ GX_API GXSetAcqusitionBufferNumber(GX_DEV_HANDLE hDevice, uint64_t nBufferNum);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXRegisterCaptureCallback  (GX_DEV_HANDLE hDevice, void *pUserParam, GXCaptureCallBack callBackFun);
+GX_API GXRegisterCaptureCallback(
+  GX_DEV_HANDLE hDevice, void *pUserParam,
+  GXCaptureCallBack callBackFun);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ×¢Ïú²É¼¯»Øµ÷º¯Êý
-\attention  ±ØÐëÔÚ·¢ËÍÍ£²ÉÃüÁîÖ®ºó×¢Ïú²É¼¯»Øµ÷º¯Êý
-\param		[in]hDevice				Éè±¸¾ä±ú
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			GX_STATUS_INVALID_CALL        ·¢ËÍÍ£²ÉÃüÁîÖ®Ç°£¬²»ÄÜ×¢Ïú²É¼¯»Øµ÷º¯Êý
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ×¢ï¿½ï¿½ï¿½É¼ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+\attention  ï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½×¢ï¿½ï¿½ï¿½É¼ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]hDevice				ï¿½è±¸ï¿½ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			GX_STATUS_INVALID_CALL        ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½É¼ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Unregister the capture callback function
@@ -1603,19 +1625,19 @@ GX_API GXUnregisterCaptureCallback(GX_DEV_HANDLE hDevice);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      Ö±½Ó»ñÈ¡Ò»Ö¡Í¼Ïñ
-\attention  Èç¹ûÓÃ»§ÒÑ×¢²á²É¼¯»Øµ÷º¯Êý£¬µ÷ÓÃ´Ë½Ó¿Ú»á±¨´íGX_STATUS_INVALID_CALL
-\param		[in]hDevice        Éè±¸¾ä±ú
-\param		[in|out]pFrameData Í¼ÏñÐÅÏ¢½á¹¹ÌåÖ¸Õë
-\param		[in]nTimeout       ³¬Ê±Ê±¼ä
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			GX_STATUS_INVALID_CALL        ·¢ËÍÍ£²ÉÃüÁîÖ®Ç°£¬²»ÄÜ×¢Ïú²É¼¯»Øµ÷º¯Êý
-			GX_STATUS_INVALID_PARAMETER   ÓÃ»§´«ÈëÍ¼ÏñµØÖ·Ö¸ÕëÎªNULL
-			GX_STATUS_NEED_MORE_BUFFER    ÓÃ»§·ÖÅäµÄÍ¼ÏñbufferÐ¡ÓÚÊµ¼ÊÐèÒªµÄ´óÐ¡
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      Ö±ï¿½Ó»ï¿½È¡Ò»Ö¡Í¼ï¿½ï¿½
+\attention  ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½×¢ï¿½ï¿½É¼ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´Ë½Ó¿Ú»á±¨ï¿½ï¿½GX_STATUS_INVALID_CALL
+\param		[in]hDevice        ï¿½è±¸ï¿½ï¿½ï¿½
+\param		[in|out]pFrameData Í¼ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½á¹¹ï¿½ï¿½Ö¸ï¿½ï¿½
+\param		[in]nTimeout       ï¿½ï¿½Ê±Ê±ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			GX_STATUS_INVALID_CALL        ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½É¼ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER   ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Ö·Ö¸ï¿½ï¿½ÎªNULL
+			GX_STATUS_NEED_MORE_BUFFER    ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½bufferÐ¡ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Òªï¿½Ä´ï¿½Ð¡
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Get a frame of image directly
@@ -1636,16 +1658,16 @@ GX_API GXGetImage(GX_DEV_HANDLE hDevice, GX_FRAME_DATA *pFrameData, uint32_t nTi
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      Çå¿Õ²É¼¯Êä³ö¶ÓÁÐ
-\attention  Èç¹ûÓÃ»§´¦ÀíÍ¼ÏñµÄËÙ¶È½ÏÂý£¬¿âÄÚ»á²ÐÁôÉÏ´Î²É¼¯¹ý³ÌµÄ»º´æÍ¼Ïñ£¬ÌØ±ðÔÚ´¥·¢Ä£Ê½ÏÂ£¬
-            ÓÃ»§·¢ËÍÍê´¥·¢Ö®ºó£¬»ñÈ¡µ½µÄÊÇ¾ÉÍ¼£¬Èç¹ûÓÃ»§Ïë»ñÈ¡µ½µ±Ç°´¥·¢¶ÔÓ¦µÄÍ¼Ïñ£¬ÐèÒªÔÚ
-		    ·¢ËÍ´¥·¢Ö®Ç°µ÷ÓÃGXFlushQueue½Ó¿Ú£¬ÏÈÇå¿ÕÍ¼ÏñÊä³ö¶ÓÁÐ¡£
-\param		[in]hDevice        Éè±¸¾ä±ú
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½Õ²É¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\attention  ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½Ù¶È½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú»ï¿½ï¿½ï¿½ï¿½ï¿½Ï´Î²É¼ï¿½ï¿½ï¿½ï¿½ÌµÄ»ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Ø±ï¿½ï¿½Ú´ï¿½ï¿½ï¿½Ä£Ê½ï¿½Â£ï¿½
+            ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê´¥ï¿½ï¿½Ö®ï¿½ó£¬»ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½
+		    ï¿½ï¿½ï¿½Í´ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½ï¿½ï¿½GXFlushQueueï¿½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½
+\param		[in]hDevice        ï¿½è±¸ï¿½ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Clear the collection output queue
@@ -1664,19 +1686,19 @@ GX_API GXFlushQueue(GX_DEV_HANDLE hDevice);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ×¢²áÊÂ¼þ»Øµ÷º¯Êý
-\attention  Éè±¸ÊÂ¼þ±ÈÈç£¬µôÏßÊÂ¼þ¡¢ÆØ¹â½áÊøµÈ£¬ÕâÐ©ÊÂ¼þ¶¼¿ÉÒÔÍ¨¹ýÕâ¸ö½Ó¿ÚµÄ»Øµ÷·½Ê½´«³ö£¬
-            ÓÃ»§²»ÐèÒª»ñÈ¡ÊÂ¼þµÄÊ±ºòµ÷ÓÃGXUnregisterEventCallback½Ó¿Ú×¢Ïú»Øµ÷º¯Êý
-\param		[in]hDevice			Éè±¸¾ä±ú
-\param		[in]pUserParam		ÓÃ»§Ë½ÓÐÊý¾Ý
-\param		[in]callBackFun		ÓÃ»§×¢²áµÄ»Øµ÷º¯Êý
-\param		[out]pHCallBack		µôÏß»Øµ÷º¯Êý¾ä±ú£¬´Ë¾ä±úÓÃÀ´×¢Ïú»Øµ÷º¯ÊýÊ¹ÓÃ
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			GX_STATUS_INVALID_PARAMETER   ÓÃ»§´«Èë»Øµ÷º¯Êý·Ç·¨»òÕß´«ÈëÊÂ¼þÀàÐÍ·Ç·¨
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ×¢ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+\attention  ï¿½è±¸ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ç£¬ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ø¹ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½Ð©ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ÚµÄ»Øµï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½È¡ï¿½Â¼ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½GXUnregisterEventCallbackï¿½Ó¿ï¿½×¢ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]hDevice			ï¿½è±¸ï¿½ï¿½ï¿½
+\param		[in]pUserParam		ï¿½Ã»ï¿½Ë½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]callBackFun		ï¿½Ã»ï¿½×¢ï¿½ï¿½Ä»Øµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[out]pHCallBack		ï¿½ï¿½ï¿½ß»Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER   ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ß´ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Í·Ç·ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Register the event callback function
@@ -1693,25 +1715,26 @@ GX_API GXFlushQueue(GX_DEV_HANDLE hDevice);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXRegisterDeviceOfflineCallback    (GX_DEV_HANDLE hDevice,
-										   void* pUserParam,
-										   GXDeviceOfflineCallBack callBackFun,
-										   GX_EVENT_CALLBACK_HANDLE *pHCallBack);
+GX_API GXRegisterDeviceOfflineCallback(
+  GX_DEV_HANDLE hDevice,
+  void * pUserParam,
+  GXDeviceOfflineCallBack callBackFun,
+  GX_EVENT_CALLBACK_HANDLE *pHCallBack);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ×¢ÏúÊÂ¼þ»Øµ÷º¯Êý
-\attention  Éè±¸ÊÂ¼þ±ÈÈç£¬µôÏßÊÂ¼þ¡¢ÆØ¹â½áÊøµÈ£¬ÕâÐ©ÊÂ¼þ¶¼¿ÉÒÔÍ¨¹ýÕâ¸ö½Ó¿ÚµÄ»Øµ÷·½Ê½´«³ö£¬
-            ÓÃ»§²»ÐèÒª»ñÈ¡ÊÂ¼þµÄÊ±ºòµ÷ÓÃGXUnregisterEventCallback½Ó¿Ú×¢Ïú»Øµ÷º¯Êý
-\param		[in]hDevice			Éè±¸¾ä±ú
-\param		[in]pHCallBack		µôÏß»Øµ÷º¯Êý¾ä±ú
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			GX_STATUS_INVALID_CALL        ·¢ËÍÍ£²ÉÃüÁîÖ®Ç°£¬²»ÄÜ×¢Ïú²É¼¯»Øµ÷º¯Êý
-			GX_STATUS_INVALID_PARAMETER   ÓÃ»§´«ÈëÊÂ¼þÀàÐÍ·Ç·¨
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ×¢ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+\attention  ï¿½è±¸ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ç£¬ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ø¹ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½Ð©ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ÚµÄ»Øµï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½È¡ï¿½Â¼ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½GXUnregisterEventCallbackï¿½Ó¿ï¿½×¢ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]hDevice			ï¿½è±¸ï¿½ï¿½ï¿½
+\param		[in]pHCallBack		ï¿½ï¿½ï¿½ß»Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			GX_STATUS_INVALID_CALL        ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½É¼ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER   ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Í·Ç·ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Unregister event handle callback function
@@ -1727,20 +1750,22 @@ GX_API GXRegisterDeviceOfflineCallback    (GX_DEV_HANDLE hDevice,
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXUnregisterDeviceOfflineCallback  (GX_DEV_HANDLE hDevice, GX_EVENT_CALLBACK_HANDLE  hCallBack);
+GX_API GXUnregisterDeviceOfflineCallback(
+  GX_DEV_HANDLE hDevice,
+  GX_EVENT_CALLBACK_HANDLE  hCallBack);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      Çå¿ÕÊÂ¼þÊä³ö¶ÓÁÐ
-\attention  ¿âÄÚ²¿ÊÂ¼þÊý¾ÝµÄ½ÓÊÕºÍ´¦Àí²ÉÓÃ»º´æ»úÖÆ£¬Èç¹ûÓÃ»§½ÓÊÕ¡¢´¦ÀíÊÂ¼þµÄËÙ¶ÈÂýÓÚÊÂ¼þ²úÉúµÄËÙ¶È£¬
-            ÊÂ¼þÊý¾Ý¾Í»áÔÚ¿âÄÚ»ýÀÛ£¬»áÓ°ÏìÓÃ»§»ñÈ¡ÊµÊ±ÊÂ¼þÊý¾Ý¡£Èç¹ûÓÃ»§Ïë»ñÈ¡ÊµÊ±ÊÂ¼þÊý¾Ý£¬ÐèÒªÏÈ
-			µ÷ÓÃGXFlushEvent½Ó¿ÚÇå¿ÕÊÂ¼þ»º´æÊý¾Ý¡£´Ë½Ó¿ÚÒ»´ÎÐÔÇå¿ÕËùÓÐÊÂ¼þÊý¾Ý¡£
-\param		[in]hDevice        Éè±¸¾ä±ú
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\attention  ï¿½ï¿½ï¿½Ú²ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ÝµÄ½ï¿½ï¿½ÕºÍ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Õ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶È£ï¿½
+            ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ý¾Í»ï¿½ï¿½Ú¿ï¿½ï¿½Ú»ï¿½ï¿½Û£ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½È¡ÊµÊ±ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ý¡ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½È¡ÊµÊ±ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½Òªï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½GXFlushEventï¿½Ó¿ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¡ï¿½ï¿½Ë½Ó¿ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ý¡ï¿½
+\param		[in]hDevice        ï¿½è±¸ï¿½ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Empty the event output queue
@@ -1756,19 +1781,19 @@ GX_API GXUnregisterDeviceOfflineCallback  (GX_DEV_HANDLE hDevice, GX_EVENT_CALLB
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXFlushEvent               (GX_DEV_HANDLE hDevice);
+GX_API GXFlushEvent(GX_DEV_HANDLE hDevice);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief     »ñÈ¡µ±Ç°ÊÂ¼þ¶ÓÁÐÀïÃæµÄÊÂ¼þ¸öÊý
-\param     [in]hDevice        Éè±¸¾ä±ú
-\param     [in]pnEventNum     ÊÂ¼þ¸öÊýÖ¸Õë
-\return    GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-		   GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-           GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-           GX_STATUS_INVALID_PARAMETER   ÓÃ»§´«ÈëpnEventNumÎªNULLÖ¸Õë
-           ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief     ï¿½ï¿½È¡ï¿½ï¿½Ç°ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
+\param     [in]hDevice        ï¿½è±¸ï¿½ï¿½ï¿½
+\param     [in]pnEventNum     ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
+\return    GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		   GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+           GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+           GX_STATUS_INVALID_PARAMETER   ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½pnEventNumÎªNULLÖ¸ï¿½ï¿½
+           ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief     Get the number of the events in the current remote device event queue cache.
@@ -1781,23 +1806,23 @@ GX_API GXFlushEvent               (GX_DEV_HANDLE hDevice);
 		   The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXGetEventNumInQueue       (GX_DEV_HANDLE hDevice, uint32_t *pnEventNum);
+GX_API GXGetEventNumInQueue(GX_DEV_HANDLE hDevice, uint32_t *pnEventNum);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ×¢²áÊôÐÔ¸üÐÂ»Øµ÷º¯Êý
-\attention  ÓÃ»§¿ÉÍ¨¹ý´Ë½Ó¿Ú»ñÈ¡ÊÂ¼þÊý¾Ý£¬Ïê¼ûÊ¾Àý³ÌÐò
-\param		[in]hDevice          Éè±¸¾ä±ú
-\param		[in]pUserParam       ÓÃ»§Ë½ÓÐÊý¾Ý
-\param		[in]callBackFun      ÓÃ»§×¢²áµÄ»Øµ÷º¯Êý
-\param		[in]strfeatureName   ½ÚµãÃû³Æ
-\param		[out]pHCallBack      »Øµ÷º¯Êý¾ä±ú
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			GX_STATUS_INVALID_PARAMETER   ÓÃ»§´«Èë»Øµ÷º¯Êý·Ç·¨
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ×¢ï¿½ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½Â»Øµï¿½ï¿½ï¿½ï¿½ï¿½
+\attention  ï¿½Ã»ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½Ë½Ó¿Ú»ï¿½È¡ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]hDevice          ï¿½è±¸ï¿½ï¿½ï¿½
+\param		[in]pUserParam       ï¿½Ã»ï¿½Ë½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]callBackFun      ï¿½Ã»ï¿½×¢ï¿½ï¿½Ä»Øµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]strfeatureName   ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[out]pHCallBack      ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			GX_STATUS_INVALID_PARAMETER   ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Register property update callback function.
@@ -1814,24 +1839,25 @@ GX_API GXGetEventNumInQueue       (GX_DEV_HANDLE hDevice, uint32_t *pnEventNum);
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXRegisterFeatureCallbackByString  (GX_PORT_HANDLE hPort,
-								   void* pUserParam,
-								   GXFeatureCallBackByString  callBackFun,
-								   const char*  strfeatureName,
-								   GX_FEATURE_CALLBACK_BY_STRING_HANDLE *pHCallBack);
+GX_API GXRegisterFeatureCallbackByString(
+  GX_PORT_HANDLE hPort,
+  void * pUserParam,
+  GXFeatureCallBackByString  callBackFun,
+  const char *  strfeatureName,
+  GX_FEATURE_CALLBACK_BY_STRING_HANDLE *pHCallBack);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ×¢ÏúÊôÐÔ¸üÐÂ»Øµ÷º¯Êý
-\attention  ÓëGXRegisterFeatureCallbackÅäÌ×Ê¹ÓÃ£¬Ã¿´Î×¢²á¶¼±ØÐëÓÐÏàÓ¦µÄ×¢ÏúÓëÖ®¶ÔÓ¦
-\param		[in]hDevice				Éè±¸¾ä±ú
-\param		[in]strfeatureName		½ÚµãÃû³Æ
-\param		[out]pHCallBack			»Øµ÷º¯Êý¾ä±ú
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ×¢ï¿½ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½Â»Øµï¿½ï¿½ï¿½ï¿½ï¿½
+\attention  ï¿½ï¿½GXRegisterFeatureCallbackï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã£ï¿½Ã¿ï¿½ï¿½×¢ï¿½á¶¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½Ó¦
+\param		[in]hDevice				ï¿½è±¸ï¿½ï¿½ï¿½
+\param		[in]strfeatureName		ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[out]pHCallBack			ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Unregister device attribute update callback function.
@@ -1845,20 +1871,21 @@ GX_API GXRegisterFeatureCallbackByString  (GX_PORT_HANDLE hPort,
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXUnregisterFeatureCallbackByString(GX_PORT_HANDLE  hPort,
-                                    const char* strfeatureName,
-                                    GX_FEATURE_CALLBACK_BY_STRING_HANDLE  hCallBack);
+GX_API GXUnregisterFeatureCallbackByString(
+  GX_PORT_HANDLE  hPort,
+  const char * strfeatureName,
+  GX_FEATURE_CALLBACK_BY_STRING_HANDLE  hCallBack);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      µ¼³öÏà»úµ±Ç°²ÎÊýµ½ÅäÖÃÎÄ¼þ£¨ANSI½Ó¿Ú£©
-\param		[in]hDevice         Éè±¸¾ä±ú
-\param		[in]pszFilePath     ÅäÖÃÎÄ¼þÊä³öÂ·¾¶
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			ÉÏÃæÃ»ÓÐº­¸Çµ½µÄ£¬²»³£¼ûµÄ´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ANSIï¿½Ó¿Ú£ï¿½
+\param		[in]hDevice         ï¿½è±¸ï¿½ï¿½ï¿½
+\param		[in]pszFilePath     ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ðºï¿½ï¿½Çµï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Export the current parameter of the camera to the configuration file.(ANSI)
@@ -1870,19 +1897,19 @@ GX_API GXUnregisterFeatureCallbackByString(GX_PORT_HANDLE  hPort,
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXExportConfigFile (GX_DEV_HANDLE hDevice, const char * pszFilePath);
+GX_API GXExportConfigFile(GX_DEV_HANDLE hDevice, const char * pszFilePath);
 
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      µ¼³öÏà»úµ±Ç°²ÎÊýµ½ÅäÖÃÎÄ¼þ£¨UNICODE½Ó¿Ú£©
-\param		[in]hDevice         Éè±¸¾ä±ú
-\param		[in]pszFilePath     ÅäÖÃÎÄ¼þÊä³öÂ·¾¶£¨wchar_tÀàÐÍ£©
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			ÉÏÃæÃ»ÓÐº­¸Çµ½µÄ£¬²»³£¼ûµÄ´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½UNICODEï¿½Ó¿Ú£ï¿½
+\param		[in]hDevice         ï¿½è±¸ï¿½ï¿½ï¿½
+\param		[in]pszFilePath     ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½wchar_tï¿½ï¿½ï¿½Í£ï¿½
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ðºï¿½ï¿½Çµï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief		(unicode interface)
@@ -1898,15 +1925,15 @@ GX_API GXExportConfigFileW(GX_DEV_HANDLE hDevice, const wchar_t * pszFilePath);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ½«ÅäÖÃÎÄ¼þÖÐ²ÎÊýµ¼Èëµ½Ïà»ú£¨ANSI½Ó¿Ú£©
-\param		[in]hDevice         Éè±¸¾ä±ú
-\param		[in]pszFilePath     ÅäÖÃÎÄ¼þÂ·¾¶
-\param		[in]bVerify         Èç¹û´ËÖµÎªtrue£¬ËùÓÐµ¼Èë½øÈ¥µÄÖµ½«»á±»¶Á³ö½øÐÐÐ£ÑéÊÇ·ñÒ»ÖÂ
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			ÉÏÃæÃ»ÓÐº­¸Çµ½µÄ£¬²»³£¼ûµÄ´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ð²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ëµ½ï¿½ï¿½ï¿½ï¿½ï¿½ANSIï¿½Ó¿Ú£ï¿½
+\param		[in]hDevice         ï¿½è±¸ï¿½ï¿½ï¿½
+\param		[in]pszFilePath     ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Â·ï¿½ï¿½
+\param		[in]bVerify         ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÎªtrueï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½Öµï¿½ï¿½ï¿½á±»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½Ç·ï¿½Ò»ï¿½ï¿½
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ðºï¿½ï¿½Çµï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Import the configuration file for the camera.(ANSI)
@@ -1927,15 +1954,15 @@ GX_API GXImportConfigFile(GX_DEV_HANDLE hDevice, const char * pszFilePath, bool 
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ½«ÅäÖÃÎÄ¼þÖÐ²ÎÊýµ¼Èëµ½Ïà»ú£¨UNICODE½Ó¿Ú£©
-\param		[in]hDevice         Éè±¸¾ä±ú
-\param		[in]pszFilePath     ÅäÖÃÎÄ¼þÂ·¾¶
-\param		[in]bVerify         Èç¹û´ËÖµÎªtrue£¬ËùÓÐµ¼Èë½øÈ¥µÄÖµ½«»á±»¶Á³ö½øÐÐÐ£ÑéÊÇ·ñÒ»ÖÂ
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			ÉÏÃæÃ»ÓÐº­¸Çµ½µÄ£¬²»³£¼ûµÄ´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ð²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ëµ½ï¿½ï¿½ï¿½ï¿½ï¿½UNICODEï¿½Ó¿Ú£ï¿½
+\param		[in]hDevice         ï¿½è±¸ï¿½ï¿½ï¿½
+\param		[in]pszFilePath     ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Â·ï¿½ï¿½
+\param		[in]bVerify         ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÎªtrueï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½Öµï¿½ï¿½ï¿½á±»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½Ç·ï¿½Ò»ï¿½ï¿½
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ðºï¿½ï¿½Çµï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief		(unicode interface)
@@ -1951,24 +1978,26 @@ GX_API GXImportConfigFile(GX_DEV_HANDLE hDevice, const char * pszFilePath, bool 
 #ifndef __cplusplus
 GX_API GXImportConfigFileW(GX_DEV_HANDLE hDevice, const wchar_t * pszFilePath, bool bVerify);
 #else
-GX_API GXImportConfigFileW(GX_DEV_HANDLE hDevice, const wchar_t * pszFilePath, bool bVerify = false);
+GX_API GXImportConfigFileW(
+  GX_DEV_HANDLE hDevice, const wchar_t * pszFilePath,
+  bool bVerify = false);
 #endif
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ²É¼¯Ö®ºó¿ÉÍ¨¹ý´Ë½Ó¿Ú»ñÈ¡Ò»ÕÅÍ¼Æ¬
-\attention  ÎÞ
-\param		[in]hDevice    Éè±¸¾ä±ú
-\param      [out]ppFrameBuffer      ´ý·Å»Ø GxIAPI ¿âµÄÍ¼ÏñÊý¾Ý Buf Ö¸Õë
-\param      [in]nTimeOut            ³¬Ê±Ê±¼äµ¥ÔªºÁÃë
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			GX_STATUS_NOT_IMPLEMENTED     µ±Ç°²»Ö§³ÖµÄ¹¦ÄÜ
-			GX_STATUS_ERROR_TYPE          ÓÃ»§´«ÈëµÄfeatureIDÀàÐÍ´íÎó
-			GX_STATUS_INVALID_ACCESS      µ±Ç°²»¿É·ÃÎÊ
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½É¼ï¿½Ö®ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½Ë½Ó¿Ú»ï¿½È¡Ò»ï¿½ï¿½Í¼Æ¬
+\attention  ï¿½ï¿½
+\param		[in]hDevice    ï¿½è±¸ï¿½ï¿½ï¿½
+\param      [out]ppFrameBuffer      ï¿½ï¿½ï¿½Å»ï¿½ GxIAPI ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Buf Ö¸ï¿½ï¿½
+\param      [in]nTimeOut            ï¿½ï¿½Ê±Ê±ï¿½äµ¥Ôªï¿½ï¿½ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			GX_STATUS_NOT_IMPLEMENTED     ï¿½ï¿½Ç°ï¿½ï¿½Ö§ï¿½ÖµÄ¹ï¿½ï¿½ï¿½
+			GX_STATUS_ERROR_TYPE          ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½featureIDï¿½ï¿½ï¿½Í´ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_ACCESS      ï¿½ï¿½Ç°ï¿½ï¿½ï¿½É·ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      After starting the acquisition, an image (zero copy) can be acquired through this interface.
@@ -1986,24 +2015,25 @@ GX_API GXImportConfigFileW(GX_DEV_HANDLE hDevice, const wchar_t * pszFilePath, b
             The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXDQBuf (GX_DEV_HANDLE hDevice,
-                PGX_FRAME_BUFFER *ppFrameBuffer,
-                uint32_t nTimeOut);
+GX_API GXDQBuf(
+  GX_DEV_HANDLE hDevice,
+  PGX_FRAME_BUFFER *ppFrameBuffer,
+  uint32_t nTimeOut);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÔÚ¿ªÊ¼²É¼¯Ö®ºó£¬Í¨¹ý´Ë½Ó¿Ú¿ÉÒÔ½«Í¼ÏñÊý¾Ý Buf ·Å»Ø GxIAPI ¿â£¬¼ÌÐøÓÃÓÚ²É¼¯¡£
-\attention  ÎÞ
-\param		[in]hDevice    Éè±¸¾ä±ú
-\param      [out]ppFrameBuffer      ´ý·Å»Ø GxIAPI ¿âµÄÍ¼ÏñÊý¾Ý Buf Ö¸Õë
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			GX_STATUS_NOT_IMPLEMENTED     µ±Ç°²»Ö§³ÖµÄ¹¦ÄÜ
-			GX_STATUS_ERROR_TYPE          ÓÃ»§´«ÈëµÄfeatureIDÀàÐÍ´íÎó
-			GX_STATUS_INVALID_ACCESS      µ±Ç°²»¿É·ÃÎÊ
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ï¿½Ú¿ï¿½Ê¼ï¿½É¼ï¿½Ö®ï¿½ï¿½Í¨ï¿½ï¿½ï¿½Ë½Ó¿Ú¿ï¿½ï¿½Ô½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Buf ï¿½Å»ï¿½ GxIAPI ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²É¼ï¿½ï¿½ï¿½
+\attention  ï¿½ï¿½
+\param		[in]hDevice    ï¿½è±¸ï¿½ï¿½ï¿½
+\param      [out]ppFrameBuffer      ï¿½ï¿½ï¿½Å»ï¿½ GxIAPI ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Buf Ö¸ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			GX_STATUS_NOT_IMPLEMENTED     ï¿½ï¿½Ç°ï¿½ï¿½Ö§ï¿½ÖµÄ¹ï¿½ï¿½ï¿½
+			GX_STATUS_ERROR_TYPE          ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½featureIDï¿½ï¿½ï¿½Í´ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_ACCESS      ï¿½ï¿½Ç°ï¿½ï¿½ï¿½É·ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      After the acquisition is started, the image data buffer can be placed back into the GxIAPI
@@ -2019,7 +2049,7 @@ GX_API GXDQBuf (GX_DEV_HANDLE hDevice,
             The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXQBuf (GX_DEV_HANDLE hDevice, PGX_FRAME_BUFFER pFrameBuffer);
+GX_API GXQBuf(GX_DEV_HANDLE hDevice, PGX_FRAME_BUFFER pFrameBuffer);
 
 //----------------------------------------------------------------------------------
 /**
@@ -2030,68 +2060,68 @@ GX_API GXQBuf (GX_DEV_HANDLE hDevice, PGX_FRAME_BUFFER pFrameBuffer);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ×¢²á»º³åÇø
-\param		[in]hDevice			   		  Éè±¸handle
-\param		[in]pBuffer		         	  ×¢²ábufferÖÐµÄpBuffer
-\param		[in]nSize      	    	  	  ×¢²ábufferµÄ´óÐ¡
-\param		[in]pUserParam      	      ÓÃ»§²ÎÊý
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-            GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-            GX_STATUS_INVALID_PARAMETER   ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-            ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ×¢ï¿½á»ºï¿½ï¿½ï¿½ï¿½
+\param		[in]hDevice			                  ï¿½è±¸handle
+\param		[in]pBuffer		                  ×¢ï¿½ï¿½bufferï¿½Ðµï¿½pBuffer
+\param		[in]nSize                         ×¢ï¿½ï¿½bufferï¿½Ä´ï¿½Ð¡
+\param		[in]pUserParam                ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_INVALID_PARAMETER   ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Register the extern buffer.
-\param		[in]hDevice			   		  The handle of the device
-\param		[in]pBuffer      	    	  The Register Buffer
-\param		[in]nSize      	    	  	  The Register Buffer size
-\param		[in]pUserParam      	      The User Parameter
+\param		[in]hDevice			                  The handle of the device
+\param		[in]pBuffer                       The Register Buffer
+\param		[in]nSize                         The Register Buffer size
+\param		[in]pUserParam                The User Parameter
 \return     GX_STATUS_SUCCESS             The operation is successful and no error occurs.
 			GX_STATUS_NOT_INIT_API        The GXInitLib initialization library is not called.
 			GX_STATUS_INVALID_PARAMETER   The pointer that the user input is NULL.
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXRegisterBuffer(GX_DEV_HANDLE hDevice, void* pBuffer, size_t nSize, void* pUserParam);
+GX_API GXRegisterBuffer(GX_DEV_HANDLE hDevice, void * pBuffer, size_t nSize, void * pUserParam);
 
 // ---------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ×¢Ïú»º³åÇø
-\param		[in]hDevice			   		Éè±¸handle
-\param		[in]pBuffer      	     ×¢²ábufferÖÐµÄpBuffer
-\return     GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-            GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-            GX_STATUS_INVALID_PARAMETER   ÓÃ»§ÊäÈëµÄÖ¸ÕëÎªNULL
-            ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST
+\Chineseï¿½ï¿½
+\brief      ×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param		[in]hDevice			                ï¿½è±¸handle
+\param		[in]pBuffer                  ×¢ï¿½ï¿½bufferï¿½Ðµï¿½pBuffer
+\return     GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+            GX_STATUS_INVALID_PARAMETER   ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÎªNULL
+            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Unregister the extern buffer.
-\param		[in]hDevice			   		The handle of the device
-\param		[in]pBuffer 	     	    The RegisterBuffer pBuffer
+\param		[in]hDevice			                The handle of the device
+\param		[in]pBuffer                 The RegisterBuffer pBuffer
 \return     GX_STATUS_SUCCESS             The operation is successful and no error occurs.
 			GX_STATUS_NOT_INIT_API        The GXInitLib initialization library is not called.
 			GX_STATUS_INVALID_PARAMETER   The pointer that the user input is NULL.
 			The errors that are not covered above please reference GX_STATUS_LIST.
 */
 // ---------------------------------------------------------------------------
-GX_API GXUnRegisterBuffer(GX_DEV_HANDLE hDevice, void* pBuffer);
+GX_API GXUnRegisterBuffer(GX_DEV_HANDLE hDevice, void * pBuffer);
 
 #ifndef _WIN32
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ¿ªÊ¼²É¼¯°üÀ¨Á÷²É¼¯ºÍÉè±¸²É¼¯
-\attention  ÎÞ
-\param		[in]hDevice    Éè±¸¾ä±ú
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			GX_STATUS_NOT_IMPLEMENTED     µ±Ç°²»Ö§³ÖµÄ¹¦ÄÜ
-			GX_STATUS_ERROR_TYPE          ÓÃ»§´«ÈëµÄfeatureIDÀàÐÍ´íÎó
-			GX_STATUS_INVALID_ACCESS      µ±Ç°²»¿É·ÃÎÊ
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST 
+\Chineseï¿½ï¿½
+\brief      ï¿½ï¿½Ê¼ï¿½É¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½ï¿½è±¸ï¿½É¼ï¿½
+\attention  ï¿½ï¿½
+\param		[in]hDevice    ï¿½è±¸ï¿½ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			GX_STATUS_NOT_IMPLEMENTED     ï¿½ï¿½Ç°ï¿½ï¿½Ö§ï¿½ÖµÄ¹ï¿½ï¿½ï¿½
+			GX_STATUS_ERROR_TYPE          ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½featureIDï¿½ï¿½ï¿½Í´ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_ACCESS      ï¿½ï¿½Ç°ï¿½ï¿½ï¿½É·ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Start acquisition, including stream acquisition and device acquisition.
@@ -2104,21 +2134,21 @@ GX_API GXUnRegisterBuffer(GX_DEV_HANDLE hDevice, void* pBuffer);
             The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXStreamOn (GX_DEV_HANDLE hDevice);
+GX_API GXStreamOn(GX_DEV_HANDLE hDevice);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      Í£Ö¹²É¼¯°üÀ¨Á÷²É¼¯ºÍÉè±¸²É¼¯
-\attention  ÎÞ
-\param		[in]hDevice    Éè±¸¾ä±ú
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			GX_STATUS_NOT_IMPLEMENTED     µ±Ç°²»Ö§³ÖµÄ¹¦ÄÜ
-			GX_STATUS_ERROR_TYPE          ÓÃ»§´«ÈëµÄfeatureIDÀàÐÍ´íÎó
-			GX_STATUS_INVALID_ACCESS      µ±Ç°²»¿É·ÃÎÊ
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST 
+\Chineseï¿½ï¿½
+\brief      Í£Ö¹ï¿½É¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½ï¿½è±¸ï¿½É¼ï¿½
+\attention  ï¿½ï¿½
+\param		[in]hDevice    ï¿½è±¸ï¿½ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			GX_STATUS_NOT_IMPLEMENTED     ï¿½ï¿½Ç°ï¿½ï¿½Ö§ï¿½ÖµÄ¹ï¿½ï¿½ï¿½
+			GX_STATUS_ERROR_TYPE          ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½featureIDï¿½ï¿½ï¿½Í´ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_ACCESS      ï¿½ï¿½Ç°ï¿½ï¿½ï¿½É·ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      Stop acquisition, including stop stream acquisition and stop device acquisition.
@@ -2133,27 +2163,27 @@ GX_API GXStreamOn (GX_DEV_HANDLE hDevice);
             The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXStreamOff (GX_DEV_HANDLE hDevice);
+GX_API GXStreamOff(GX_DEV_HANDLE hDevice);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÔÚ¿ªÊ¼²É¼¯Ö®ºó£¬Í¨¹ý´Ë½Ó¿Ú¿ÉÒÔ»ñÈ¡ËùÓÐ²É¼¯µ½Í¼ÏñµÄ buf£¨Áã¿½±´£©¡£»ñÈ¡µ½µÄÍ¼ÏñÊý¾ÝÊý×éÖÐµÄ
-´æÍ¼Ë³ÐòÊÇ´Ó¾Éµ½ÐÂ£¬¼´ ppFrameBufferArray[0]´æ´¢µÄÊÇ×î¾ÉµÄÍ¼£¬ppFrameBufferArray[nFrameCount -
-1]´æ´¢µÄÊÇ×îÐÂµÄÍ¼¡£
-\attention  ÎÞ
-\param		[in]hDevice    Éè±¸¾ä±ú
-\param      [out]ppFrameBufferArray         Í¼ÏñÊý¾ÝÖ¸ÕëµÄÊý×é
-\param      [in]nFrameBufferArraySize       Í¼ÏñÊý×éÉêÇë¸öÊý
-\param      [out]pnFrameCount               ·µ»ØÊµ¼ÊÌî³äÍ¼Ïñ¸öÊý
-\param      [in]nTimeOut                    È¡Í¼µÄ³¬Ê±Ê±¼ä£¨µ¥Î» ms£©
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			GX_STATUS_NOT_IMPLEMENTED     µ±Ç°²»Ö§³ÖµÄ¹¦ÄÜ
-			GX_STATUS_ERROR_TYPE          ÓÃ»§´«ÈëµÄfeatureIDÀàÐÍ´íÎó
-			GX_STATUS_INVALID_ACCESS      µ±Ç°²»¿É·ÃÎÊ
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST 
+\Chineseï¿½ï¿½
+\brief      ï¿½Ú¿ï¿½Ê¼ï¿½É¼ï¿½Ö®ï¿½ï¿½Í¨ï¿½ï¿½ï¿½Ë½Ó¿Ú¿ï¿½ï¿½Ô»ï¿½È¡ï¿½ï¿½ï¿½Ð²É¼ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ bufï¿½ï¿½ï¿½ã¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½
+ï¿½ï¿½Í¼Ë³ï¿½ï¿½ï¿½Ç´Ó¾Éµï¿½ï¿½Â£ï¿½ï¿½ï¿½ ppFrameBufferArray[0]ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½Í¼ï¿½ï¿½ppFrameBufferArray[nFrameCount -
+1]ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½Í¼ï¿½ï¿½
+\attention  ï¿½ï¿½
+\param		[in]hDevice    ï¿½è±¸ï¿½ï¿½ï¿½
+\param      [out]ppFrameBufferArray         Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param      [in]nFrameBufferArraySize       Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+\param      [out]pnFrameCount               ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½
+\param      [in]nTimeOut                    È¡Í¼ï¿½Ä³ï¿½Ê±Ê±ï¿½ä£¨ï¿½ï¿½Î» msï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			GX_STATUS_NOT_IMPLEMENTED     ï¿½ï¿½Ç°ï¿½ï¿½Ö§ï¿½ÖµÄ¹ï¿½ï¿½ï¿½
+			GX_STATUS_ERROR_TYPE          ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½featureIDï¿½ï¿½ï¿½Í´ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_ACCESS      ï¿½ï¿½Ç°ï¿½ï¿½ï¿½É·ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      After starting the acquisition, all the buffers (zero copies) of the acquired images can be
@@ -2178,25 +2208,26 @@ GX_API GXStreamOff (GX_DEV_HANDLE hDevice);
             The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXDQAllBufs (GX_DEV_HANDLE hDevice, 
-                    PGX_FRAME_BUFFER *ppFrameBufferArray, 
-                    uint32_t nFrameBufferArraySize, 
-                    uint32_t *pnFrameCount,
-                    uint32_t nTimeOut);
+GX_API GXDQAllBufs(
+  GX_DEV_HANDLE hDevice,
+  PGX_FRAME_BUFFER *ppFrameBufferArray,
+  uint32_t nFrameBufferArraySize,
+  uint32_t *pnFrameCount,
+  uint32_t nTimeOut);
 
 //----------------------------------------------------------------------------------
 /**
-\Chinese£º
-\brief      ÔÚ¿ªÊ¼²É¼¯Ö®ºó£¬Í¨¹ý´Ë½Ó¿Ú¿ÉÒÔ½«Í¼ÏñÊý¾Ý Buf ·Å»Ø GxIAPI ¿â£¬¼ÌÐøÓÃÓÚ²É¼¯¡£
-\attention  ÎÞ
-\param		[in]hDevice    Éè±¸¾ä±ú
-\return		GX_STATUS_SUCCESS             ²Ù×÷³É¹¦£¬Ã»ÓÐ·¢Éú´íÎó
-			GX_STATUS_NOT_INIT_API        Ã»ÓÐµ÷ÓÃGXInitLib³õÊ¼»¯¿â
-			GX_STATUS_INVALID_HANDLE      ÓÃ»§´«Èë·Ç·¨µÄ¾ä±ú
-			GX_STATUS_NOT_IMPLEMENTED     µ±Ç°²»Ö§³ÖµÄ¹¦ÄÜ
-			GX_STATUS_ERROR_TYPE          ÓÃ»§´«ÈëµÄfeatureIDÀàÐÍ´íÎó
-			GX_STATUS_INVALID_ACCESS      µ±Ç°²»¿É·ÃÎÊ
-			ÆäËü´íÎóÇé¿öÇë²Î¼ûGX_STATUS_LIST 
+\Chineseï¿½ï¿½
+\brief      ï¿½Ú¿ï¿½Ê¼ï¿½É¼ï¿½Ö®ï¿½ï¿½Í¨ï¿½ï¿½ï¿½Ë½Ó¿Ú¿ï¿½ï¿½Ô½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Buf ï¿½Å»ï¿½ GxIAPI ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²É¼ï¿½ï¿½ï¿½
+\attention  ï¿½ï¿½
+\param		[in]hDevice    ï¿½è±¸ï¿½ï¿½ï¿½
+\return		GX_STATUS_SUCCESS             ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_NOT_INIT_API        Ã»ï¿½Ðµï¿½ï¿½ï¿½GXInitLibï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_HANDLE      ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ä¾ï¿½ï¿½
+			GX_STATUS_NOT_IMPLEMENTED     ï¿½ï¿½Ç°ï¿½ï¿½Ö§ï¿½ÖµÄ¹ï¿½ï¿½ï¿½
+			GX_STATUS_ERROR_TYPE          ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½featureIDï¿½ï¿½ï¿½Í´ï¿½ï¿½ï¿½
+			GX_STATUS_INVALID_ACCESS      ï¿½ï¿½Ç°ï¿½ï¿½ï¿½É·ï¿½ï¿½ï¿½
+			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¼ï¿½GX_STATUS_LIST
 
 \English:
 \brief      After the acquisition is started, all the acquired image data buffers can be put back into
@@ -2209,7 +2240,7 @@ GX_API GXDQAllBufs (GX_DEV_HANDLE hDevice,
             The errors that are not covered above please reference GX_STATUS_LIST.
 */
 //----------------------------------------------------------------------------------
-GX_API GXQAllBufs (GX_DEV_HANDLE hDevice);
+GX_API GXQAllBufs(GX_DEV_HANDLE hDevice);
 #endif
 
 #endif  //GX_GALAXY_H

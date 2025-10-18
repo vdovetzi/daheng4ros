@@ -10,7 +10,7 @@
 
 using Camera = sdk_daheng::Camera;
 using OnSetParametersCallbackHandle =
-    rclcpp::node_interfaces::OnSetParametersCallbackHandle;
+  rclcpp::node_interfaces::OnSetParametersCallbackHandle;
 
 std::shared_ptr<Camera> cam;
 
@@ -24,12 +24,13 @@ int32_t brightnessFactor = 0;
 float sharpenFactor = 0.;
 
 rcl_interfaces::msg::SetParametersResult
-parameters_callback(const std::vector<rclcpp::Parameter> &parameters) {
+parameters_callback(const std::vector<rclcpp::Parameter> & parameters)
+{
   auto result = rcl_interfaces::msg::SetParametersResult();
   result.successful = true;
 
-  for (const auto &param : parameters) {
-    const std::string &param_name = param.get_name();
+  for (const auto & param : parameters) {
+    const std::string & param_name = param.get_name();
 
     if (param_name == "brightness") {
       brightnessFactor = param.as_int();
@@ -46,13 +47,15 @@ parameters_callback(const std::vector<rclcpp::Parameter> &parameters) {
   return result;
 }
 
-void applyEnhancements(unsigned char *p_rgb) {
+void applyEnhancements(unsigned char *p_rgb)
+{
   DxContrast(p_rgb, p_rgb, width * height * 3, contrastFactor);
   DxBrightness(p_rgb, p_rgb, width * height * 3, brightnessFactor);
   DxSharpen24B(p_rgb, p_rgb, width, height, sharpenFactor);
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
   rclcpp::init(argc, argv);
 
   rclcpp::Node::SharedPtr node = rclcpp::Node::make_shared("image_publisher");
@@ -109,7 +112,7 @@ int main(int argc, char **argv) {
   node->get_parameter("sharpness", sharpenFactor);
 
   OnSetParametersCallbackHandle::SharedPtr param_callback_handle =
-      node->add_on_set_parameters_callback(parameters_callback);
+    node->add_on_set_parameters_callback(parameters_callback);
   // ####################################
   cv::Mat camera_matrix = cv::Mat(3, 3, CV_64F);
   cv::Mat dist_coeffs = cv::Mat(D.size(), 1, CV_64F);
@@ -133,9 +136,9 @@ int main(int argc, char **argv) {
   cam->SetGain(gain);
 
   std::shared_ptr<image_transport::ImageTransport> image_transport =
-      std::make_shared<image_transport::ImageTransport>(node);
+    std::make_shared<image_transport::ImageTransport>(node);
   image_transport::Publisher image_pub =
-      image_transport->advertise(camera_topic, 10);
+    image_transport->advertise(camera_topic, 10);
 
   cv::Mat map1, map2;
   if (!camera_matrix.empty() && !dist_coeffs.empty()) {
@@ -145,33 +148,33 @@ int main(int argc, char **argv) {
   }
 
   cam->SetCallback([&](unsigned char *p) {
-    if (p == nullptr) {
-      RCLCPP_WARN(node->get_logger(), "Received null image buffer");
-      return;
-    }
-
-    try {
-      rgb_image = cv::Mat(dim2, dim1, CV_8UC3, p);
-
-      cv::resize(rgb_image, rgb_image, {width, height});
-
-      applyEnhancements(rgb_image.data);
-
-      if (!camera_matrix.empty() && !dist_coeffs.empty()) {
-        cv::remap(rgb_image, rgb_image, map1, map2, cv::INTER_LINEAR);
+      if (p == nullptr) {
+        RCLCPP_WARN(node->get_logger(), "Received null image buffer");
+        return;
       }
 
-      auto msg = cv_bridge::CvImage(std_msgs::msg::Header(), "rgb8", rgb_image)
-                     .toImageMsg();
+      try {
+        rgb_image = cv::Mat(dim2, dim1, CV_8UC3, p);
 
-      msg->header.stamp = node->now();
-      msg->header.frame_id = camera_frame;
+        cv::resize(rgb_image, rgb_image, {width, height});
 
-      image_pub.publish(msg);
+        applyEnhancements(rgb_image.data);
 
-    } catch (const std::exception &e) {
-      RCLCPP_ERROR(node->get_logger(), "Error processing image: %s", e.what());
-    }
+        if (!camera_matrix.empty() && !dist_coeffs.empty()) {
+          cv::remap(rgb_image, rgb_image, map1, map2, cv::INTER_LINEAR);
+        }
+
+        auto msg = cv_bridge::CvImage(std_msgs::msg::Header(), "rgb8", rgb_image)
+        .toImageMsg();
+
+        msg->header.stamp = node->now();
+        msg->header.frame_id = camera_frame;
+
+        image_pub.publish(msg);
+
+      } catch (const std::exception & e) {
+        RCLCPP_ERROR(node->get_logger(), "Error processing image: %s", e.what());
+      }
   });
 
   rclcpp::spin(node);

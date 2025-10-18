@@ -17,16 +17,15 @@
 #define PIXFMT_CVT_FAIL -1            ///< PixelFormatConvert fail
 #define PIXFMT_CVT_SUCCESS 0          ///< PixelFormatConvert success
 
-namespace sdk_daheng {
+namespace sdk_daheng
+{
 
 class Camera {
 public:
   Camera();
   ~Camera();
 
-  void Acquire();
-  void SetCallback(const std::function<void(unsigned char *)> &cb);
-  void Release();
+  void SetCallback(const std::function<void(unsigned char *)> & cb);
 
   void SetExposure(float exp);
   void SetFrameRate(float fps);
@@ -36,7 +35,8 @@ public:
   std::pair<int32_t, int32_t> GetFrameDimensions();
 
 private:
-  inline void GX_VERIFY_EXIT(int emStatus) {
+  inline void GX_VERIFY_EXIT(int emStatus)
+  {
     if (emStatus != GX_STATUS_SUCCESS) {
       GetErrorString(emStatus);
       GXCloseDevice(g_hDevice);
@@ -50,6 +50,9 @@ private:
   void UnPreForAcquisition();
   void ProcGetImage();
   int PixelFormatConvert(PGX_FRAME_BUFFER pFrameBuffer);
+
+  void Acquire();
+  void Release();
 
 private:
   GX_DEV_HANDLE g_hDevice = nullptr;

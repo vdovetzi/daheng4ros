@@ -1,8 +1,11 @@
 #include "daheng4ros/camera.hpp"
 #include <iostream>
+#include <unistd.h>
 
-namespace sdk_daheng {
-Camera::Camera() {
+namespace sdk_daheng
+{
+Camera::Camera()
+{
   GX_STATUS emStatus = GX_STATUS_SUCCESS;
   uint32_t ui32DeviceNum = 0;
 
@@ -56,7 +59,7 @@ Camera::Camera() {
   // Get string length of Serial number
   GX_STRING_VALUE stStrSerialNumber;
   emStatus =
-      GXGetStringValue(g_hDevice, "DeviceSerialNumber", &stStrSerialNumber);
+    GXGetStringValue(g_hDevice, "DeviceSerialNumber", &stStrSerialNumber);
   GX_VERIFY_EXIT(emStatus);
   std::cout << "<Serial Number : " << stStrSerialNumber.strCurValue << ">\n";
 
@@ -73,10 +76,10 @@ Camera::Camera() {
   emStatus = GXGetNodeAccessMode(g_hDevice, "PixelColorFilter", &emAccessMode);
   GX_VERIFY_EXIT(emStatus);
   g_bColorFilter = ((emAccessMode == GX_NODE_ACCESS_MODE_WO) ||
-                    (emAccessMode == GX_NODE_ACCESS_MODE_RO) ||
-                    (emAccessMode == GX_NODE_ACCESS_MODE_RW))
-                       ? true
-                       : false;
+    (emAccessMode == GX_NODE_ACCESS_MODE_RO) ||
+    (emAccessMode == GX_NODE_ACCESS_MODE_RW)) ?
+    true :
+    false;
 
   // This app only support color cameras
   if (!g_bColorFilter) {
@@ -118,7 +121,7 @@ Camera::Camera() {
 
   // Set user fps
   emStatus =
-      GXSetEnumValueByString(g_hDevice, "AcquisitionFrameRateMode", "On");
+    GXSetEnumValueByString(g_hDevice, "AcquisitionFrameRateMode", "On");
   GX_VERIFY_EXIT(emStatus);
 
   // Set default 50 fps (max)
@@ -135,16 +138,16 @@ Camera::Camera() {
                                  &emStreamTransferSizeIm);
   GX_VERIFY_EXIT(emStatus);
   bool bStreamTransferSize =
-      ((emStreamTransferSizeIm == GX_NODE_ACCESS_MODE_RO) ||
-       (emStreamTransferSizeIm == GX_NODE_ACCESS_MODE_WO) ||
-       (emStreamTransferSizeIm == GX_NODE_ACCESS_MODE_RW))
-          ? true
-          : false;
+    ((emStreamTransferSizeIm == GX_NODE_ACCESS_MODE_RO) ||
+    (emStreamTransferSizeIm == GX_NODE_ACCESS_MODE_WO) ||
+    (emStreamTransferSizeIm == GX_NODE_ACCESS_MODE_RW)) ?
+    true :
+    false;
 
   if (bStreamTransferSize) {
     // Set size of data transfer block
     emStatus =
-        GXSetIntValue(g_hDevice, "StreamTransferSize", ACQ_TRANSFER_SIZE);
+      GXSetIntValue(g_hDevice, "StreamTransferSize", ACQ_TRANSFER_SIZE);
     GX_VERIFY_EXIT(emStatus);
   }
 
@@ -153,11 +156,11 @@ Camera::Camera() {
                                  &emStreamTransferUrbIm);
   GX_VERIFY_EXIT(emStatus);
   bool bStreamTransferNumberUrb =
-      ((emStreamTransferUrbIm == GX_NODE_ACCESS_MODE_RO) ||
-       (emStreamTransferUrbIm == GX_NODE_ACCESS_MODE_WO) ||
-       (emStreamTransferUrbIm == GX_NODE_ACCESS_MODE_RW))
-          ? true
-          : false;
+    ((emStreamTransferUrbIm == GX_NODE_ACCESS_MODE_RO) ||
+    (emStreamTransferUrbIm == GX_NODE_ACCESS_MODE_WO) ||
+    (emStreamTransferUrbIm == GX_NODE_ACCESS_MODE_RW)) ?
+    true :
+    false;
 
   if (bStreamTransferNumberUrb) {
     // Set qty. of data transfer block
@@ -174,11 +177,14 @@ Camera::Camera() {
   PreForAcquisition();
 
   Acquire();
+
+  sleep(5);
 }
 
-Camera::~Camera() { Release(); }
+Camera::~Camera() {Release();}
 
-void Camera::Acquire() {
+void Camera::Acquire()
+{
   GX_STATUS emStatus = GX_STATUS_SUCCESS;
 
   emStatus = GXStreamOn(g_hDevice);
@@ -191,12 +197,14 @@ void Camera::Acquire() {
   aq_thread = std::thread(&Camera::ProcGetImage, this);
 }
 
-void Camera::SetCallback(const std::function<void(unsigned char *)> &cb) {
+void Camera::SetCallback(const std::function<void(unsigned char *)> & cb)
+{
   std::unique_lock<std::mutex> lock(cb_mutex);
   callback = cb;
 }
 
-void Camera::Release() {
+void Camera::Release()
+{
   GX_STATUS emStatus = GX_STATUS_SUCCESS;
 
   // Stop Acquisition thread
@@ -230,22 +238,26 @@ void Camera::Release() {
   }
 }
 
-void Camera::SetExposure(float exp) {
+void Camera::SetExposure(float exp)
+{
   GX_STATUS emStatus = GXSetFloatValue(g_hDevice, "ExposureTime", exp);
   GX_VERIFY_EXIT(emStatus);
 }
 
-void Camera::SetFrameRate(float fps) {
+void Camera::SetFrameRate(float fps)
+{
   GX_STATUS emStatus = GXSetFloatValue(g_hDevice, "AcquisitionFrameRate", fps);
   GX_VERIFY_EXIT(emStatus);
 }
 
-void Camera::SetGain(float gain) {
+void Camera::SetGain(float gain)
+{
   GX_STATUS emStatus = GXSetFloatValue(g_hDevice, "Gain", gain);
   GX_VERIFY_EXIT(emStatus);
 }
 
-float Camera::GetExposure() {
+float Camera::GetExposure()
+{
   GX_FLOAT_VALUE emExposure;
   GX_STATUS emStatus = GXGetFloatValue(g_hDevice, "ExposureTime", &emExposure);
   GX_VERIFY_EXIT(emStatus);
@@ -253,7 +265,8 @@ float Camera::GetExposure() {
   return emExposure.dCurValue;
 }
 
-std::pair<int32_t, int32_t> Camera::GetFrameDimensions() {
+std::pair<int32_t, int32_t> Camera::GetFrameDimensions()
+{
   GX_INT_VALUE emWidth, emHeight;
 
   GX_STATUS emStatus = GX_STATUS_SUCCESS;
@@ -265,7 +278,8 @@ std::pair<int32_t, int32_t> Camera::GetFrameDimensions() {
   return std::make_pair(emWidth.nCurValue, emHeight.nCurValue);
 }
 
-void Camera::GetErrorString(GX_STATUS emErrorStatus) {
+void Camera::GetErrorString(GX_STATUS emErrorStatus)
+{
   char *error_info = nullptr;
   size_t size = 0;
   GX_STATUS emStatus = GX_STATUS_SUCCESS;
@@ -299,12 +313,14 @@ void Camera::GetErrorString(GX_STATUS emErrorStatus) {
   }
 }
 
-void Camera::PreForAcquisition() {
+void Camera::PreForAcquisition()
+{
   g_pRGBImageBuf = new unsigned char[g_nPayloadSize * 3];
   g_pRaw8Image = new unsigned char[g_nPayloadSize];
 }
 
-void Camera::UnPreForAcquisition() {
+void Camera::UnPreForAcquisition()
+{
   // Release resources
   if (g_pRaw8Image != NULL) {
     delete[] g_pRaw8Image;
@@ -316,7 +332,8 @@ void Camera::UnPreForAcquisition() {
   }
 }
 
-void Camera::ProcGetImage() {
+void Camera::ProcGetImage()
+{
   GX_STATUS emStatus = GX_STATUS_SUCCESS;
 
   // Thread running flag setup
@@ -357,57 +374,58 @@ void Camera::ProcGetImage() {
   std::cout << "<Acquisition thread Exit!>\n";
 }
 
-int Camera::PixelFormatConvert(PGX_FRAME_BUFFER pFrameBuffer) {
+int Camera::PixelFormatConvert(PGX_FRAME_BUFFER pFrameBuffer)
+{
   VxInt32 emDXStatus = DX_OK;
 
   // Convert RAW8 or RAW16 image to RGB24 image
   switch (pFrameBuffer->nPixelFormat) {
-  case GX_PIXEL_FORMAT_BAYER_GR8:
-  case GX_PIXEL_FORMAT_BAYER_RG8:
-  case GX_PIXEL_FORMAT_BAYER_GB8:
-  case GX_PIXEL_FORMAT_BAYER_BG8: {
+    case GX_PIXEL_FORMAT_BAYER_GR8:
+    case GX_PIXEL_FORMAT_BAYER_RG8:
+    case GX_PIXEL_FORMAT_BAYER_GB8:
+    case GX_PIXEL_FORMAT_BAYER_BG8: {
     // Convert to the RGB image
-    emDXStatus = DxRaw8toRGB24((unsigned char *)pFrameBuffer->pImgBuf,
+        emDXStatus = DxRaw8toRGB24((unsigned char *)pFrameBuffer->pImgBuf,
                                g_pRGBImageBuf, pFrameBuffer->nWidth,
                                pFrameBuffer->nHeight, RAW2RGB_NEIGHBOUR,
                                DX_PIXEL_COLOR_FILTER(g_i64ColorFilter), false);
-    if (emDXStatus != DX_OK) {
-      printf("DxRaw8toRGB24 Failed, Error Code: %d\n", emDXStatus);
-      return PIXFMT_CVT_FAIL;
-    }
-    break;
-  }
-  case GX_PIXEL_FORMAT_BAYER_GR10:
-  case GX_PIXEL_FORMAT_BAYER_RG10:
-  case GX_PIXEL_FORMAT_BAYER_GB10:
-  case GX_PIXEL_FORMAT_BAYER_BG10:
-  case GX_PIXEL_FORMAT_BAYER_GR12:
-  case GX_PIXEL_FORMAT_BAYER_RG12:
-  case GX_PIXEL_FORMAT_BAYER_GB12:
-  case GX_PIXEL_FORMAT_BAYER_BG12: {
+        if (emDXStatus != DX_OK) {
+          printf("DxRaw8toRGB24 Failed, Error Code: %d\n", emDXStatus);
+          return PIXFMT_CVT_FAIL;
+        }
+        break;
+      }
+    case GX_PIXEL_FORMAT_BAYER_GR10:
+    case GX_PIXEL_FORMAT_BAYER_RG10:
+    case GX_PIXEL_FORMAT_BAYER_GB10:
+    case GX_PIXEL_FORMAT_BAYER_BG10:
+    case GX_PIXEL_FORMAT_BAYER_GR12:
+    case GX_PIXEL_FORMAT_BAYER_RG12:
+    case GX_PIXEL_FORMAT_BAYER_GB12:
+    case GX_PIXEL_FORMAT_BAYER_BG12: {
     // Convert to the Raw8 image
-    emDXStatus =
-        DxRaw16toRaw8((unsigned char *)pFrameBuffer->pImgBuf, g_pRaw8Image,
+        emDXStatus =
+          DxRaw16toRaw8((unsigned char *)pFrameBuffer->pImgBuf, g_pRaw8Image,
                       pFrameBuffer->nWidth, pFrameBuffer->nHeight, DX_BIT_2_9);
-    if (emDXStatus != DX_OK) {
-      printf("DxRaw16toRaw8 Failed, Error Code: %d\n", emDXStatus);
-      return PIXFMT_CVT_FAIL;
-    }
+        if (emDXStatus != DX_OK) {
+          printf("DxRaw16toRaw8 Failed, Error Code: %d\n", emDXStatus);
+          return PIXFMT_CVT_FAIL;
+        }
     // Convert to the RGB24 image
-    emDXStatus =
-        DxRaw8toRGB24(g_pRaw8Image, g_pRGBImageBuf, pFrameBuffer->nWidth,
+        emDXStatus =
+          DxRaw8toRGB24(g_pRaw8Image, g_pRGBImageBuf, pFrameBuffer->nWidth,
                       pFrameBuffer->nHeight, RAW2RGB_NEIGHBOUR,
                       DX_PIXEL_COLOR_FILTER(g_i64ColorFilter), false);
-    if (emDXStatus != DX_OK) {
-      printf("DxRaw8toRGB24 Failed, Error Code: %d\n", emDXStatus);
-      return PIXFMT_CVT_FAIL;
-    }
-    break;
-  }
-  default: {
-    printf("Error : PixelFormat of this camera is not supported\n");
-    return PIXFMT_CVT_FAIL;
-  }
+        if (emDXStatus != DX_OK) {
+          printf("DxRaw8toRGB24 Failed, Error Code: %d\n", emDXStatus);
+          return PIXFMT_CVT_FAIL;
+        }
+        break;
+      }
+    default: {
+        printf("Error : PixelFormat of this camera is not supported\n");
+        return PIXFMT_CVT_FAIL;
+      }
   }
   return PIXFMT_CVT_SUCCESS;
 }

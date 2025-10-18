@@ -20,7 +20,7 @@ find_package(OpenCV REQUIRED)
 find_package(rcl_interfaces REQUIRED)
 
 ####### Daheng lib #############
-add_library(daheng_cam SHARED 
+add_library(daheng_cam SHARED
   src/camera.cpp
 )
 
@@ -29,12 +29,12 @@ target_include_directories(daheng_cam PUBLIC
 )
 
 target_link_libraries(daheng_cam PUBLIC
- gxiapi
+  gxiapi
 )
 ###############################
 
 add_executable(image_publisher src/image_publisher.cpp)
-target_link_libraries(image_publisher 
+target_link_libraries(image_publisher
   daheng_cam
   ${OpenCV_LIBS}
 )
@@ -48,12 +48,24 @@ ament_target_dependencies(image_publisher
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
-  # the following line skips the linter which checks for copyrights
-  # comment the line when a copyright and license is added to all source files
+  find_package(ament_cmake_gtest REQUIRED)
+
+  # C++ tests
+  ament_add_gtest(unit_tests tests/unit.cpp)
+  # Add dependencies for the C++ test executable
+  ament_target_dependencies(unit_tests
+    rclcpp
+  )
+  target_link_libraries(unit_tests
+    daheng_cam
+    ${GTEST_LIBRARIES}
+  )
+  target_include_directories(unit_tests PRIVATE
+    include/
+    ${GTEST_INCLUDE_DIRS}
+  )
+
   set(ament_cmake_copyright_FOUND TRUE)
-  # the following line skips cpplint (only works in a git repo)
-  # comment the line when this package is in a git repo and when
-  # a copyright and license is added to all source files
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
